@@ -46,14 +46,54 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="ApplicationSettings\WinAPI.cs" />
+    <Compile Include="CustomControl\CCClose.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CCClose.Designer.cs">
+      <DependentUpon>CCClose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CCMinimize.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CCMinimize.Designer.cs">
+      <DependentUpon>CCMinimize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTrangChu.Designer.cs">
+      <DependentUpon>FormTrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SoDoPhong\FormSoDoPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SoDoPhong\FormSoDoPhong.Designer.cs">
+      <DependentUpon>FormSoDoPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CustomControl\CCClose.resx">
+      <DependentUpon>CCClose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CCMinimize.resx">
+      <DependentUpon>CCMinimize.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTrangChu.resx">
+      <DependentUpon>FormTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SoDoPhong\FormSoDoPhong.resx">
+      <DependentUpon>FormSoDoPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,6 +102,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -75,6 +116,111 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="resources\3people.png" />
+    <Content Include="resources\Add.png" />
+    <Content Include="resources\Address.png" />
+    <Content Include="resources\admin.png" />
+    <Content Include="resources\back.png" />
+    <Content Include="resources\calendardark.png" />
+    <Content Include="resources\CalendarPick.png" />
+    <Content Include="resources\calendarwhite.png" />
+    <Content Include="resources\CCCD.png" />
+    <Content Include="resources\clean.png" />
+    <Content Include="resources\clock.png" />
+    <Content Include="resources\ClockPick.png" />
+    <Content Include="resources\DaDat.png" />
+    <Content Include="resources\DangNhap.png" />
+    <Content Include="resources\DangSuaChua.png" />
+    <Content Include="resources\DangSuaChuaBlackMin.png" />
+    <Content Include="resources\database.png" />
+    <Content Include="resources\DatPhongChart.png" />
+    <Content Include="resources\delete.png" />
+    <Content Include="resources\delete1.png" />
+    <Content Include="resources\details.png" />
+    <Content Include="resources\DichVu.png" />
+    <Content Include="resources\DichVu1.png" />
+    <Content Include="resources\DichVu2.png" />
+    <Content Include="resources\DichVuChart.png" />
+    <Content Include="resources\DoanhThu.png" />
+    <Content Include="resources\DoanhThuThue.png" />
+    <Content Include="resources\edit.png" />
+    <Content Include="resources\email.png" />
+    <Content Include="resources\error.png" />
+    <Content Include="resources\fix.png" />
+    <Content Include="resources\fix50.png" />
+    <Content Include="resources\fixedcloseresize.png" />
+    <Content Include="resources\fixedgreenresize.png" />
+    <Content Include="resources\fixedmaxresize.png" />
+    <Content Include="resources\fixedminresize.png" />
+    <Content Include="resources\fixednone.png" />
+    <Content Include="resources\fixedredresize.png" />
+    <Content Include="resources\fixedyellowresize.png" />
+    <Content Include="resources\Gender.png" />
+    <Content Include="resources\Giuong.png" />
+    <Content Include="resources\Giuong1.png" />
+    <Content Include="resources\heart.png" />
+    <Content Include="resources\hide.png" />
+    <Content Include="resources\HoaDon.png" />
+    <Content Include="resources\KhachHang.png" />
+    <Content Include="resources\Menu.png" />
+    <Content Include="resources\MenuChiTietTienNghi.png" />
+    <Content Include="resources\MenuDanhSachHoaDon.png" />
+    <Content Include="resources\MenuDatPhong.png" />
+    <Content Include="resources\MenuLoaiPhong.png" />
+    <Content Include="resources\MenuPhong.png" />
+    <Content Include="resources\MenuQuanLy.png" />
+    <Content Include="resources\MenuQuanLyDichVu.png" />
+    <Content Include="resources\MenuQuanLyKhachHang.png" />
+    <Content Include="resources\MenuQuanLyNhanVien.png" />
+    <Content Include="resources\MenuQuanLyTaiKhoan.png" />
+    <Content Include="resources\MenuSoDoPhong.png" />
+    <Content Include="resources\MenuThongKe.png" />
+    <Content Include="resources\MenuTienNghi.png" />
+    <Content Include="resources\MenuTrangChu.png" />
+    <Content Include="resources\message.png" />
+    <Content Include="resources\money.png" />
+    <Content Include="resources\Name.png" />
+    <Content Include="resources\NhanVien.png" />
+    <Content Include="resources\NhanVien1.png" />
+    <Content Include="resources\none.png" />
+    <Content Include="resources\note.png" />
+    <Content Include="resources\password.png" />
+    <Content Include="resources\people.png" />
+    <Content Include="resources\PhieuThue.png" />
+    <Content Include="resources\PhieuThueDgv.png" />
+    <Content Include="resources\Phone.png" />
+    <Content Include="resources\Phong.png" />
+    <Content Include="resources\phong_icon.png" />
+    <Content Include="resources\pictureIcon.png" />
+    <Content Include="resources\pictureIconLogoHD.png" />
+    <Content Include="resources\pictureIconNoneBackGroundResize.png" />
+    <Content Include="resources\pictureIconNoneBackGroundResize55.png" />
+    <Content Include="resources\printer.png" />
+    <Content Include="resources\QuenMatKhau.png" />
+    <Content Include="resources\question.png" />
+    <Content Include="resources\search.png" />
+    <Content Include="resources\selection.png" />
+    <Content Include="resources\show.png" />
+    <Content Include="resources\SoLuong.png" />
+    <Content Include="resources\SoNguoi.png" />
+    <Content Include="resources\SoPhongDat.png" />
+    <Content Include="resources\staffResize.png" />
+    <Content Include="resources\TaiKhoan.png" />
+    <Content Include="resources\ThuePhongChart.png" />
+    <Content Include="resources\tick.png" />
+    <Content Include="resources\tickblack.png" />
+    <Content Include="resources\TienNghi.png" />
+    <Content Include="resources\TimePicker.png" />
+    <Content Include="resources\TimePickerBlack.png" />
+    <Content Include="resources\TimePickerWhite.png" />
+    <Content Include="resources\top1.png" />
+    <Content Include="resources\top2.png" />
+    <Content Include="resources\top3.png" />
+    <Content Include="resources\user.png" />
+    <Content Include="resources\warning.png" />
+    <Content Include="resources\x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,13 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Hotel_Management_System
+namespace Hotel_Management_System.GUI.SoDoPhong
 {
-    public partial class Form1 : Form
+    public partial class FormSoDoPhong : Form
     {
-        public Form1()
+        private FormMain formMain;
+
+        public FormSoDoPhong(FormMain formMain)
         {
             InitializeComponent();
+            this.formMain = formMain;
         }
     }
 }

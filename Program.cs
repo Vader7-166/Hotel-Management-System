@@ -1,9 +1,12 @@
-﻿using System;
+﻿using Hotel_Management_System.GUI;
+using Hotel_Management_System.CustomControl;
+using Hotel_Management_System.DAO;
+using Hotel_Management_System.GUI;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace Hotel_Management_System
 {
     internal static class Program
@@ -16,7 +19,7 @@ namespace Hotel_Management_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMain());
+            Application.Run(new FormKetNoiCSDL());
         }
     }
 }

@@ -19,5 +19,10 @@ namespace Hotel_Management_System.GUI.SoDoPhong
             InitializeComponent();
             this.formMain = formMain;
         }
+
+        private void FormSoDoPhong_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -61,7 +61,9 @@
       <HintPath>packages\Microsoft.Office.Interop.Excel.16.0.18925.20022\lib\net40\Microsoft.Office.Interop.Excel.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -161,6 +163,30 @@
     </Compile>
     <Compile Include="CustomControl\CTRoom.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CTRoomDaDat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CTRoomDaDat.Designer.cs">
+      <DependentUpon>CTRoomDaDat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CTRoomDangSuaChua.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CTRoomDangSuaChua.Designer.cs">
+      <DependentUpon>CTRoomDangSuaChua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CTRoomDangThue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CTRoomDangThue.Designer.cs">
+      <DependentUpon>CTRoomDangThue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CTRoomTrong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CTRoomTrong.Designer.cs">
+      <DependentUpon>CTRoomTrong.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomControl\CTTextBox.cs">
       <SubType>UserControl</SubType>
@@ -309,6 +335,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControl\CTRoom.resx">
       <DependentUpon>CTRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CTRoomDaDat.resx">
+      <DependentUpon>CTRoomDaDat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CTRoomDangSuaChua.resx">
+      <DependentUpon>CTRoomDangSuaChua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CTRoomDangThue.resx">
+      <DependentUpon>CTRoomDangThue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CTRoomTrong.resx">
+      <DependentUpon>CTRoomTrong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomControl\CTTextBox.resx">
       <DependentUpon>CTTextBox.cs</DependentUpon>

@@ -1,4 +1,4 @@
-﻿using Hotel_Management_System.BUS;
+using Hotel_Management_System.BUS;
 using System;
 using System.Collections.Generic;
 using System.Linq;

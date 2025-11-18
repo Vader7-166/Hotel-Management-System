@@ -16,6 +16,7 @@ using ApplicationSettings;
 using Hotel_Management_System.DTO;
 using System.IO;
 using Hotel_Management_System.CustomControl;
+using Hotel_Management_System.GUI.SoDoPhong;
 namespace Hotel_Management_System
 {
     public partial class FormMain : Form
@@ -511,7 +512,7 @@ namespace Hotel_Management_System
             ButtonSoDoPhong.BackColor = Color.FromArgb(233, 117, 32);
             ButtonSoDoPhong.ForeColor = Color.White;
             //Open Child Form
-          //  openChildForm(new FormSoDoPhong(this,taiKhoan));
+            openChildForm(new FormSoDoPhong(this,taiKhoan));
         }
 
 
@@ -542,7 +543,7 @@ namespace Hotel_Management_System
             ButtonDanhSachKhachHang.BackColor = Color.FromArgb(233, 117, 32);
             ButtonDanhSachKhachHang.ForeColor = Color.White;
             //Open Child Form
-          //  openChildForm(new FormDanhSachKhachHang(this,this.taiKhoan));
+            openChildForm(new FormDanhSachKhachHang(this, this.taiKhoan));
         }
 
         private void ButtonPhong_Click(object sender, EventArgs e)
@@ -601,7 +602,7 @@ namespace Hotel_Management_System
             ButtonDanhSachNhanVien.BackColor = Color.FromArgb(233, 117, 32);
             ButtonDanhSachNhanVien.ForeColor = Color.White;
             //Open Child Form
-        //    openChildForm(new FormDanhSachNhanVien(this,this.taiKhoan));
+            openChildForm(new FormDanhSachNhanVien(this, this.taiKhoan));
         }
 
         private void ctClose1_Click(object sender, EventArgs e)

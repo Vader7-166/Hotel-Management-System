@@ -346,6 +346,18 @@
     <Compile Include="GUI\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\HoaDon\FormDanhSachHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HoaDon\FormDanhSachHoaDon.Designer.cs">
+      <DependentUpon>FormDanhSachHoaDon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HoaDon\FormHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\HoaDon\FormHoaDon.Designer.cs">
+      <DependentUpon>FormHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\SoDoPhong\FormSoDoPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -464,6 +476,11 @@
     <EmbeddedResource Include="GUI\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HoaDon\FormDanhSachHoaDon.resx">
+      <DependentUpon>FormDanhSachHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\HoaDon\FormHoaDon.resx">
+      <DependentUpon>FormHoaDon.cs</DependentUpon>
     <EmbeddedResource Include="GUI\KhachHang\FormSuaKhachHang.resx">
       <DependentUpon>FormSuaKhachHang.cs</DependentUpon>
     </EmbeddedResource>

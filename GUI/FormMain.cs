@@ -523,7 +523,7 @@ namespace Hotel_Management_System
             ButtonDanhSachHoaDon.BackColor = Color.FromArgb(233, 117, 32);
             ButtonDanhSachHoaDon.ForeColor = Color.White;
             //Open Child Form
-           // openChildForm(new FormDanhSachHoaDon(this));
+            openChildForm(new FormDanhSachHoaDon(this));
         }
 
         private void ButtonTrangChu_Click(object sender, EventArgs e)

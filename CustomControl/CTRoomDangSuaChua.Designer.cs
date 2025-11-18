@@ -50,6 +50,9 @@
             this.PanelTop.Name = "PanelTop";
             this.PanelTop.Size = new System.Drawing.Size(277, 123);
             this.PanelTop.TabIndex = 0;
+            this.PanelTop.Click += new System.EventHandler(this.CTRoomDangSuaChua_Click);
+            this.PanelTop.MouseLeave += new System.EventHandler(this.CTRoomDangSuaChua_MouseLeave);
+            this.PanelTop.MouseMove += new System.Windows.Forms.MouseEventHandler(this.CTRoomDangSuaChua_MouseMove);
             // 
             // LabelGhiChu
             // 
@@ -63,6 +66,9 @@
             this.LabelGhiChu.Size = new System.Drawing.Size(83, 17);
             this.LabelGhiChu.TabIndex = 26;
             this.LabelGhiChu.Text = "Hư điều hòa";
+            this.LabelGhiChu.Click += new System.EventHandler(this.CTRoomDangSuaChua_Click);
+            this.LabelGhiChu.MouseLeave += new System.EventHandler(this.CTRoomDangSuaChua_MouseLeave);
+            this.LabelGhiChu.MouseMove += new System.Windows.Forms.MouseEventHandler(this.CTRoomDangSuaChua_MouseMove);
             // 
             // LabelTrangThaiLon
             // 
@@ -76,6 +82,9 @@
             this.LabelTrangThaiLon.Size = new System.Drawing.Size(184, 32);
             this.LabelTrangThaiLon.TabIndex = 24;
             this.LabelTrangThaiLon.Text = "Đang sửa chữa";
+            this.LabelTrangThaiLon.Click += new System.EventHandler(this.CTRoomDangSuaChua_Click);
+            this.LabelTrangThaiLon.MouseLeave += new System.EventHandler(this.CTRoomDangSuaChua_MouseLeave);
+            this.LabelTrangThaiLon.MouseMove += new System.Windows.Forms.MouseEventHandler(this.CTRoomDangSuaChua_MouseMove);
             // 
             // LabelLoaiPhong
             // 
@@ -89,6 +98,9 @@
             this.LabelLoaiPhong.Size = new System.Drawing.Size(76, 17);
             this.LabelLoaiPhong.TabIndex = 23;
             this.LabelLoaiPhong.Text = "Loại phòng";
+            this.LabelLoaiPhong.Click += new System.EventHandler(this.CTRoomDangSuaChua_Click);
+            this.LabelLoaiPhong.MouseLeave += new System.EventHandler(this.CTRoomDangSuaChua_MouseLeave);
+            this.LabelLoaiPhong.MouseMove += new System.Windows.Forms.MouseEventHandler(this.CTRoomDangSuaChua_MouseMove);
             // 
             // LabelMaPhong
             // 
@@ -102,6 +114,9 @@
             this.LabelMaPhong.Size = new System.Drawing.Size(57, 25);
             this.LabelMaPhong.TabIndex = 22;
             this.LabelMaPhong.Text = "P100";
+            this.LabelMaPhong.Click += new System.EventHandler(this.CTRoomDangSuaChua_Click);
+            this.LabelMaPhong.MouseLeave += new System.EventHandler(this.CTRoomDangSuaChua_MouseLeave);
+            this.LabelMaPhong.MouseMove += new System.Windows.Forms.MouseEventHandler(this.CTRoomDangSuaChua_MouseMove);
             // 
             // LabelTrangThaiDonDep
             // 
@@ -115,6 +130,9 @@
             this.LabelTrangThaiDonDep.Size = new System.Drawing.Size(79, 17);
             this.LabelTrangThaiDonDep.TabIndex = 30;
             this.LabelTrangThaiDonDep.Text = "Đã dọn dẹp";
+            this.LabelTrangThaiDonDep.Click += new System.EventHandler(this.CTRoomDangSuaChua_Click);
+            this.LabelTrangThaiDonDep.MouseLeave += new System.EventHandler(this.CTRoomDangSuaChua_MouseLeave);
+            this.LabelTrangThaiDonDep.MouseMove += new System.Windows.Forms.MouseEventHandler(this.CTRoomDangSuaChua_MouseMove);
             // 
             // LabelThoiGian
             // 
@@ -128,6 +146,9 @@
             this.LabelThoiGian.Size = new System.Drawing.Size(38, 17);
             this.LabelThoiGian.TabIndex = 28;
             this.LabelThoiGian.Text = "0 giờ";
+            this.LabelThoiGian.Click += new System.EventHandler(this.CTRoomDangSuaChua_Click);
+            this.LabelThoiGian.MouseLeave += new System.EventHandler(this.CTRoomDangSuaChua_MouseLeave);
+            this.LabelThoiGian.MouseMove += new System.Windows.Forms.MouseEventHandler(this.CTRoomDangSuaChua_MouseMove);
             // 
             // PictureBoxTrangThai
             // 
@@ -139,6 +160,9 @@
             this.PictureBoxTrangThai.Size = new System.Drawing.Size(50, 50);
             this.PictureBoxTrangThai.TabIndex = 25;
             this.PictureBoxTrangThai.TabStop = false;
+            this.PictureBoxTrangThai.Click += new System.EventHandler(this.CTRoomDangSuaChua_Click);
+            this.PictureBoxTrangThai.MouseLeave += new System.EventHandler(this.CTRoomDangSuaChua_MouseLeave);
+            this.PictureBoxTrangThai.MouseMove += new System.Windows.Forms.MouseEventHandler(this.CTRoomDangSuaChua_MouseMove);
             // 
             // PictureBoxTrangThaiDonDep
             // 
@@ -151,6 +175,9 @@
             this.PictureBoxTrangThaiDonDep.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureBoxTrangThaiDonDep.TabIndex = 29;
             this.PictureBoxTrangThaiDonDep.TabStop = false;
+            this.PictureBoxTrangThaiDonDep.Click += new System.EventHandler(this.CTRoomDangSuaChua_Click);
+            this.PictureBoxTrangThaiDonDep.MouseLeave += new System.EventHandler(this.CTRoomDangSuaChua_MouseLeave);
+            this.PictureBoxTrangThaiDonDep.MouseMove += new System.Windows.Forms.MouseEventHandler(this.CTRoomDangSuaChua_MouseMove);
             // 
             // PictureBoxThoiGian
             // 
@@ -162,6 +189,9 @@
             this.PictureBoxThoiGian.Size = new System.Drawing.Size(20, 20);
             this.PictureBoxThoiGian.TabIndex = 27;
             this.PictureBoxThoiGian.TabStop = false;
+            this.PictureBoxThoiGian.Click += new System.EventHandler(this.CTRoomDangSuaChua_Click);
+            this.PictureBoxThoiGian.MouseLeave += new System.EventHandler(this.CTRoomDangSuaChua_MouseLeave);
+            this.PictureBoxThoiGian.MouseMove += new System.Windows.Forms.MouseEventHandler(this.CTRoomDangSuaChua_MouseMove);
             // 
             // CTRoomDangSuaChua
             // 
@@ -180,7 +210,10 @@
             this.Margin = new System.Windows.Forms.Padding(15, 20, 0, 0);
             this.Name = "CTRoomDangSuaChua";
             this.Size = new System.Drawing.Size(280, 155);
+            this.Load += new System.EventHandler(this.CTRoomDangSuaChua_Load);
             this.Click += new System.EventHandler(this.CTRoomDangSuaChua_Click);
+            this.MouseLeave += new System.EventHandler(this.CTRoomDangSuaChua_MouseLeave);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.CTRoomDangSuaChua_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxTrangThai)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxTrangThaiDonDep)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxThoiGian)).EndInit();

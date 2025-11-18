@@ -473,7 +473,7 @@ namespace Hotel_Management_System.GUI.SoDoPhong
             this.cbBoxLetter.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(145)))), ((int)(((byte)(175)))));
             this.cbBoxLetter.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.cbBoxLetter.ListTextColor = System.Drawing.Color.Black;
-            this.cbBoxLetter.Location = new System.Drawing.Point(286, 15);
+            this.cbBoxLetter.Location = new System.Drawing.Point(294, 15);
             this.cbBoxLetter.Name = "cbBoxLetter";
             this.cbBoxLetter.Padding = new System.Windows.Forms.Padding(2);
             this.cbBoxLetter.Size = new System.Drawing.Size(80, 35);
@@ -495,9 +495,9 @@ namespace Hotel_Management_System.GUI.SoDoPhong
             this.cbBoxGio.Location = new System.Drawing.Point(208, 15);
             this.cbBoxGio.Name = "cbBoxGio";
             this.cbBoxGio.Padding = new System.Windows.Forms.Padding(2);
-            this.cbBoxGio.Size = new System.Drawing.Size(80, 35);
+            this.cbBoxGio.Size = new System.Drawing.Size(86, 35);
             this.cbBoxGio.TabIndex = 42;
-            this.cbBoxGio.Texts = "12:0";
+            this.cbBoxGio.Texts = "12:00";
             this.cbBoxGio.OnSelectedIndexChanged += new System.EventHandler(this.cbBoxGio_OnSelectedIndexChanged);
             // 
             // LabelChonNgay

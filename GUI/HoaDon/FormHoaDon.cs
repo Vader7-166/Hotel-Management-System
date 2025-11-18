@@ -1,6 +1,3 @@
-﻿using ApplicationSettings;
-using Hotel_Management_System.BUS;
-using Hotel_Management_System.CustomControl;
 using Hotel_Management_System.DTO;
 using System;
 using System.Collections.Generic;
@@ -13,34 +10,92 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Hotel_Management_System.BUS;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System.Runtime.CompilerServices;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using System.Drawing.Printing;
+using Button = System.Windows.Forms.Button;
+using Hotel_Management_System.CustomControl;
 
 namespace Hotel_Management_System.GUI
 {
-    public partial class FormThemKhachHang : Form
+    public partial class FormHoaDon : Form
     {
         //Fields
-        private int borderRadius = 20;
+        HoaDon HD;
+        private int borderRadius = 10;
         private int borderSize = 2;
         private Color borderColor = Color.White;
-        FormDanhSachKhachHang formDanhSachKhachHang;
-
+        private string money = null;
         //Constructor
-        public FormThemKhachHang()
+        public FormHoaDon()
         {
             this.DoubleBuffered = true;
             this.FormBorderStyle = FormBorderStyle.None;
             this.Padding = new Padding(borderSize);
             InitializeComponent();
         }
-        public FormThemKhachHang(FormDanhSachKhachHang formDanhSachKhachHang)
+        public FormHoaDon(HoaDon HD)
         {
             this.DoubleBuffered = true;
             this.FormBorderStyle = FormBorderStyle.None;
             this.Padding = new Padding(borderSize);
-            this.formDanhSachKhachHang = formDanhSachKhachHang;
+            this.HD = HD;
             InitializeComponent();
+            LoadHD();
         }
+        void LoadHD()
+        {
+            try
+            {
+                DichVu dichvu;
+                CTDP cTDP = CTDP_BUS.Instance.GetCTDPs().Where(p => p.MaCTDP == HD.MaCTDP).Single();
 
+                //decimal TongTienHD = 0;
+                this.TextBoxSoHD.Text = HD.MaHD;
+                this.TextBoxTenKH.Text = CTDP_BUS.Instance.GetCTDPs().Where(p => p.MaCTDP == HD.MaCTDP).Single().PhieuThue.KhachHang.TenKH;
+                this.TextBoxMaPhong.Text = CTDP_BUS.Instance.GetCTDPs().Where(p => p.MaCTDP == HD.MaCTDP).Single().MaPH;
+                this.TextBoxTenNV.Text = NhanVienBUS.Instance.GetNhanVien(HD.MaNV).TenNV;
+                this.TextBoxNgayHD.Text = HD.NgHD.ToString();
+                Phong phong = PhongBUS.Instance.FindePhong(TextBoxMaPhong.Text);
+                LoaiPhong loaiphong = LoaiPhongBUS.Instance.getLoaiPhong(phong.MaLPH);
+                this.TextBoxLoaiPhong.Text = loaiphong.TenLPH;
+                List<CTDV> ctdvs = CTDV_BUS.Instance.FindCTDV(HD.MaCTDP);
+                foreach (CTDV ctdv in ctdvs)
+                {
+                    dichvu = DichVuBUS.Instance.FindDichVu(ctdv.MaDV);
+                    DataGridViewDichVu.Rows.Add(dichvu.TenDV, ctdv.DonGia.ToString("#,#"), ctdv.SL, ctdv.ThanhTien.ToString("#,#"));
+                }
+                decimal Tongtienphong = cTDP.ThanhTien;
+                string time = null;
+                if (cTDP.TheoGio == false)
+                {
+                    time  = CTDP_BUS.Instance.getKhoangTGTheoNgay(HD.MaCTDP).ToString();
+                    if (int.Parse(time) == 0)
+                        time = "1";
+                    this.TextBoxSoNgay.Text =  time + " ngày";
+                }
+                else
+                {
+                    time = CTDP_BUS.Instance.getKhoangTGTheoGio(HD.MaCTDP).ToString();
+                    this.TextBoxSoNgay.Text = CTDP_BUS.Instance.getKhoangTGTheoGio(HD.MaCTDP).ToString() + " giờ";
+                }
+                DataGridViewDichVu.Rows.Add(loaiphong.TenLPH, cTDP.DonGia.ToString("#,#"), int.Parse(time), Tongtienphong.ToString("#,#"));
+
+                //this.LabelTongTien.Text += HD.TriGia.ToString("#,#");
+                money = HD.TriGia.ToString("#,#");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            /*
+            
+            decimal Tongtienphong =  loaiphong.GiaNgay * days;
+            DataGridViewDichVu.Rows.Add(loaiphong.TenLPH, loaiphong.GiaNgay.ToString("#,#"), days, Tongtienphong.ToString("#,#"));
+            money = (TongTienHD + Tongtienphong).ToString("#,#");*/
+        }
         //Control Box
 
         //Form Move
@@ -122,6 +177,15 @@ namespace Hotel_Management_System.GUI
             public Color BottomLeftColor;
             public Color BottomRightColor;
         }
+        private FormBoundsColors GetSameDark()
+        {
+            FormBoundsColors colors = new FormBoundsColors();
+            colors.TopLeftColor = Color.FromArgb(77, 77, 77);
+            colors.TopRightColor = Color.FromArgb(77, 77, 77);
+            colors.BottomLeftColor = Color.FromArgb(77, 77, 77);
+            colors.BottomRightColor = Color.FromArgb(77, 77, 77);
+            return colors;
+        }
         private FormBoundsColors GetFormBoundsColors()
         {
             var fbColor = new FormBoundsColors();
@@ -152,23 +216,16 @@ namespace Hotel_Management_System.GUI
             }
             return fbColor;
         }
-        private FormBoundsColors GetSameDark()
-        {
-            FormBoundsColors colors = new FormBoundsColors();
-            colors.TopLeftColor = Color.FromArgb(67, 73, 73);
-            colors.TopRightColor = Color.FromArgb(67, 73, 73);
-            colors.BottomLeftColor = Color.FromArgb(67, 73, 73);
-            colors.BottomRightColor = Color.FromArgb(67, 73, 73);
-            return colors;
-        }
+
         //Event Methods
-        private void FormThemKhachHang_Paint(object sender, PaintEventArgs e)
+        private void FormHoaDon_Paint(object sender, PaintEventArgs e)
         {
             //-> SMOOTH OUTER BORDER
             e.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
             Rectangle rectForm = this.ClientRectangle;
             int mWidht = rectForm.Width / 2;
             int mHeight = rectForm.Height / 2;
+            //var fbColors = GetFormBoundsColors();
             var fbColors = GetSameDark();
             //Top Left
             DrawPath(rectForm, e.Graphics, fbColors.TopLeftColor);
@@ -184,25 +241,25 @@ namespace Hotel_Management_System.GUI
             //-> SET ROUNDED REGION AND BORDER
             FormRegionAndBorder(this, borderRadius, e.Graphics, borderColor, borderSize);
         }
-
-        private void FormThemKhachHang_Resize(object sender, EventArgs e)
+        private void FormHoaDon_Resize(object sender, EventArgs e)
         {
             this.Invalidate();
         }
 
-        private void FormThemKhachHang_SizeChanged(object sender, EventArgs e)
+        private void FormHoaDon_SizeChanged(object sender, EventArgs e)
         {
             this.Invalidate();
         }
 
-        private void FormThemKhachHang_Activated(object sender, EventArgs e)
+        private void FormHoaDon_Activated(object sender, EventArgs e)
         {
             this.Invalidate();
         }
 
         private void PanelBackground_Paint(object sender, PaintEventArgs e)
         {
-            ControlRegionAndBorder(PanelBackground, borderRadius - (borderSize / 2), e.Graphics, borderColor);
+            Graphics g = e.Graphics;
+            ControlRegionAndBorder(PanelBackground, borderRadius - (borderSize / 2), g, borderColor);
         }
 
         private void PanelBackground_MouseDown(object sender, MouseEventArgs e)
@@ -211,117 +268,103 @@ namespace Hotel_Management_System.GUI
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void CTButtonThoat_Click(object sender, EventArgs e)
+        private void ctClose1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void CTButtonCapNhat_Click(object sender, EventArgs e)
+        private void FormHoaDon_Load(object sender, EventArgs e)
         {
-            if (this.ctTextBoxName.Texts != "" && this.ctTextBoxQuocTich.Texts != "" && this.ctTextBoxCMND.Texts != "" && this.comboBoxGioiTinh.Texts != "  Giới tính")
+            DataGridView grid = DataGridViewDichVu;
+            grid.ColumnHeadersDefaultCellStyle.Font = new Font(grid.Font, FontStyle.Bold);
+            int row, offset, x, y, len;
+            row = grid.Rows.Count;
+            offset = 25 * row;
+            x = 350; y = 0; len = money.Length;
+            if (row < 6)
+                y = 400 + offset;
+            else
+                y = 370 + offset;
+            LabelTongTien.Text += money;
+            LabelTongTien.Location = new Point(x - 10 * len, y);
+        }
+
+        private void DataGridViewDichVu_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            DataGridView grid = DataGridViewDichVu;
+            int topX_left = 0, topY_left = 35, topX_right = 515, topY_right = 35;
+            int row = grid.Rows.Count; // Last row Index
+            int offset = 25 * row + 10;
+            int botX_left = 0, botY_left = 35 + offset, botX_right = 515, botY_right = 35 + offset;
+            using (var pen = new Pen(Color.FromArgb(198, 197, 195), 2))
             {
-                if (ctTextBoxCMND.Texts.Length != 12 && ctTextBoxCMND.Texts.Length != 7)
-                {
-                    CTMessageBox.Show("Vui lòng nhập đầy đủ số CCCD/Passport.", "Thông báo",
-                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
-                if (ctTextBoxSDT.Texts.Length != 10)
-                {
-                    CTMessageBox.Show("Vui lòng nhập đầy đủ SĐT.", "Thông báo",
-                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return;
-                }
+                g.DrawLine(pen, topX_left, topY_left, topX_right, topY_right);
+                g.DrawLine(pen, botX_left, botY_left, botX_right, botY_right);
+            }
+        }
 
-                List<KhachHang> khachHangs = KhachHangBUS.Instance.GetKhachHangs();
-                foreach (KhachHang khachHang in khachHangs)
-                {
-                    if (khachHang.CCCD_Passport == this.ctTextBoxCMND.Texts)
-                    {
-                        CTMessageBox.Show("Đã tồn tại số CCCD/Passport này trong danh sách khách hàng! Vui lòng kiểm tra lại thông tin.", "Thông báo",
-                                           MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-                }
-                try
-                {
-                    KhachHang khachHang1 = new KhachHang();
-                    khachHang1.MaKH = KhachHangBUS.Instance.GetMaKHNext();
-                    khachHang1.TenKH = this.ctTextBoxName.Texts;
-                    khachHang1.QuocTich = this.ctTextBoxQuocTich.Texts;
-                    khachHang1.CCCD_Passport = this.ctTextBoxCMND.Texts;
-                    khachHang1.SDT = this.ctTextBoxSDT.Texts;
-                    khachHang1.GioiTinh = this.comboBoxGioiTinh.Texts.Trim(' ');
-                    KhachHangBUS.Instance.UpdateOrAdd(khachHang1);
+        #region In Hoa Don
+        private Bitmap memoryImage;
+        private Size s;
 
-                    this.formDanhSachKhachHang.LoadAllGrid();
-                    CTMessageBox.Show("Thêm thông tin thành công.", "Thông báo",
-                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Close();
-                }
-                catch (Exception)
+        private void CaptureScreen()
+        {
+            Graphics myGraphics = this.CreateGraphics();
+            s = this.ClientSize;
+            memoryImage = new Bitmap(s.Width, s.Height, myGraphics);
+            Graphics memoryGraphics = Graphics.FromImage(memoryImage);
+            memoryGraphics.CopyFromScreen(this.Location.X, this.Location.Y, 0, -10, s);
+        }
+
+        private void printDocument_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawImage(memoryImage, 0, 0);
+        }
+
+        private void HideButton()
+        {
+            Printer.Visible = false;
+            ctMaximize1.Visible = false;
+            ctMinimize1.Visible = false;
+            ctClose1.Visible = false;
+        }
+
+        private void ShowButton()
+        {
+            Printer.Visible = true;
+            ctMaximize1.Visible = true;
+            ctMinimize1.Visible = true;
+            ctClose1.Visible = true;
+        }
+
+        private void Printer_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (printDialog.ShowDialog() == DialogResult.OK)
                 {
-                    CTMessageBox.Show("Đã xảy ra lỗi! Vui lòng thử lại.", "Thông báo",
-                                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
-                {
+                    HideButton();
+                    this.Refresh();
+
+                    CaptureScreen();
+                    printDocument.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("In hóa đơn", s.Width + 23, s.Height + 17);
+                    printDocument.Print();
+
+                    ShowButton();
+                    printDialog.Dispose();
                 }
             }
-            else
-                CTMessageBox.Show("Vui lòng nhập đầy đủ thông tin khách hàng.", "Thông báo",
-                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            catch (Exception ex)
+            {
+                CTMessageBox.Show(ex.Message, "Thông báo");
+            }
+            finally
+            {
+                ShowButton();
+                printDialog.Dispose();
+            }
         }
-
-        private void ctTextBoxName__TextChanged(object sender, EventArgs e)
-        {
-            TextBox textBoxName = sender as TextBox;
-            textBoxName.KeyPress += TextBoxName_KeyPress;
-        }
-
-        private void TextBoxName_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            TextBoxType.Instance.TextBoxNotNumber(e);
-        }
-
-        private void FormThemKhachHang_Load(object sender, EventArgs e)
-        {
-            this.ActiveControl = labelThemKhachHang;
-        }
-
-        private void ctTextBoxCMND__TextChanged(object sender, EventArgs e)
-        {
-            TextBox textBoxCCCD = sender as TextBox;
-            textBoxCCCD.MaxLength = 12;
-            textBoxCCCD.KeyPress += TextBoxCCCD_KeyPress;
-        }
-
-        private void TextBoxCCCD_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            TextBoxType.Instance.TextBoxOnlyNumber(e);
-        }
-
-        private void ctTextBoxSDT__TextChanged(object sender, EventArgs e)
-        {
-            TextBox textBoxSDT = sender as TextBox;
-            textBoxSDT.MaxLength = 10;
-            textBoxSDT.KeyPress += TextBoxSDT_KeyPress;
-        }
-
-        private void TextBoxSDT_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            TextBoxType.Instance.TextBoxOnlyNumber(e);
-        }
-
-        private void ctTextBoxQuocTich__TextChanged(object sender, EventArgs e)
-        {
-            TextBox textBoxQuocTich = sender as TextBox;
-            textBoxQuocTich.KeyPress += TextBoxQuocTich_KeyPress;
-        }
-
-        private void TextBoxQuocTich_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            TextBoxType.Instance.TextBoxNotNumber(e);
-        }
+        #endregion
     }
 }

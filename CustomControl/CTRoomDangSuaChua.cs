@@ -89,26 +89,72 @@ namespace Hotel_Management_System.CustomControl
 
         private void CTRoomDangSuaChua_Click(object sender, EventArgs e)
         {
-            //FormBackground formBackground = new FormBackground(formMain);
-            //try
-            //{
-            //    using (FormThongTinPhong formThongTinPhong = new FormThongTinPhong(formMain, this.LabelTrangThaiLon.Text, null, phong))
-            //    {
-            //        formBackground.Owner = formMain;
-            //        formBackground.Show();
-            //        formThongTinPhong.Owner = formBackground;
-            //        formThongTinPhong.ShowDialog();
-            //        this.formSoDoPhong.LoadLanDau();
-            //        formBackground.Dispose();
-            //    }
-            //}
-            //catch (Exception)
-            //{
-            //    CTMessageBox.Show("Đã xảy ra lỗi! Vui lòng thử lại.", "Thông báo",
-            //                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-            //finally { formBackground.Dispose(); }
+            FormBackground formBackground = new FormBackground(formMain);
+            try
+            {
+                using (FormThongTinPhong formThongTinPhong = new FormThongTinPhong(formMain, this.LabelTrangThaiLon.Text, null, phong))
+                {
+                    formBackground.Owner = formMain;
+                    formBackground.Show();
+                    formThongTinPhong.Owner = formBackground;
+                    formThongTinPhong.ShowDialog();
+                    this.formSoDoPhong.LoadLanDau();
+                    formBackground.Dispose();
+                }
+            }
+            catch (Exception)
+            {
+                CTMessageBox.Show("Đã xảy ra lỗi! Vui lòng thử lại.", "Thông báo",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally { formBackground.Dispose(); }
         }
 
+        private void setColorMove(Color colorTop, Color colorBack)
+        {
+            LabelMaPhong.BackColor
+                = LabelLoaiPhong.BackColor
+                = PictureBoxTrangThai.BackColor
+                = LabelTrangThaiLon.BackColor
+                = LabelGhiChu.BackColor
+                = PanelTop.BackColor = colorTop;
+            this.BackColor
+                = PictureBoxThoiGian.BackColor
+                = PictureBoxTrangThaiDonDep.BackColor
+                = LabelThoiGian.BackColor
+                = LabelTrangThaiDonDep.BackColor
+                = colorBack;
+        }
+        private void setColorLeave(Color colorTop, Color colorBack)
+        {
+            LabelMaPhong.BackColor
+                = LabelLoaiPhong.BackColor
+                = PictureBoxTrangThai.BackColor
+                = LabelTrangThaiLon.BackColor
+                = PanelTop.BackColor
+                = LabelGhiChu.BackColor
+                = colorTop;
+            this.BackColor
+                = PictureBoxThoiGian.BackColor
+                = PictureBoxTrangThaiDonDep.BackColor
+                = LabelThoiGian.BackColor
+                = LabelTrangThaiDonDep.BackColor
+                = colorBack;
+        }
+
+        private void CTRoomDangSuaChua_Load(object sender, EventArgs e)
+        {
+            this.Invalidate();
+        }
+
+        private void CTRoomDangSuaChua_MouseLeave(object sender, EventArgs e)
+        {
+            setColorLeave(Color.FromArgb(43, 183, 213), Color.FromArgb(230, 222, 224));
+        }
+
+        private void CTRoomDangSuaChua_MouseMove(object sender, MouseEventArgs e)
+        {
+            setColorMove(Color.FromArgb(33, 140, 163), Color.FromArgb(154, 148, 150));
+        }
     }
 }

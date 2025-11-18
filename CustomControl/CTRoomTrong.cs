@@ -128,24 +128,34 @@ namespace Hotel_Management_System.CustomControl
         private void CTRoomTrong_Click(object sender, EventArgs e)
         {
             FormBackground formBackground = new FormBackground(formMain);
-            //    try
-            //    {
-            //        using (FormThongTinPhong formThongTinPhong = new FormThongTinPhong(formMain, this.LabelTrangThaiLon.Text, null, phong, taiKhoan))
-            //        {
-            //            formBackground.Owner = formMain;
-            //            formBackground.Show();
-            //            formThongTinPhong.Owner = formBackground;
-            //            formThongTinPhong.ShowDialog();
-            //            this.formSoDoPhong.LoadLanDau();
-            //            formBackground.Dispose();
-            //        }
-            //    }
-            //    catch (Exception)
-            //    {
-            //        CTMessageBox.Show("Đã xảy ra lỗi! Vui lòng thử lại.", "Thông báo",
-            //                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-            //    finally { formBackground.Dispose(); }
+            try
+            {
+                using (FormThongTinPhong formThongTinPhong = new FormThongTinPhong(formMain, this.LabelTrangThaiLon.Text, null, phong, taiKhoan))
+                {
+                    formBackground.Owner = formMain;
+                    formBackground.Show();
+                    formThongTinPhong.Owner = formBackground;
+                    formThongTinPhong.ShowDialog();
+                    this.formSoDoPhong.LoadLanDau();
+                    formBackground.Dispose();
+                }
+            }
+            catch (Exception)
+            {
+                CTMessageBox.Show("Đã xảy ra lỗi! Vui lòng thử lại.", "Thông báo",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally { formBackground.Dispose(); }
+        }
+
+        private void CTRoomTrong_Load(object sender, EventArgs e)
+        {
+            this.Invalidate();
+        }
+
+        private void CTRoom_VisibleChanged(object sender, EventArgs e)
+        {
+            this.Invalidate();
         }
     }
 }

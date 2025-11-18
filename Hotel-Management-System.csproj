@@ -80,6 +80,7 @@
   <ItemGroup>
     <Compile Include="ApplicationSettings\ConnectDB.cs" />
     <Compile Include="ApplicationSettings\SqlHelper.cs" />
+    <Compile Include="ApplicationSettings\TextBoxType.cs" />
     <Compile Include="ApplicationSettings\WinAPI.cs" />
     <Compile Include="BUS\CTDP_BUS.cs" />
     <Compile Include="BUS\CTDV_BUS.cs" />
@@ -286,6 +287,18 @@
     <Compile Include="GUI\SoDoPhong\FormSoDoPhong.Designer.cs">
       <DependentUpon>FormSoDoPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\SoDoPhong\FormThongTinPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SoDoPhong\FormThongTinPhong.Designer.cs">
+      <DependentUpon>FormThongTinPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SoDoPhong\FormDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SoDoPhong\FormDatPhong.Designer.cs">
+      <DependentUpon>FormDatPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\TaiKhoan\FormDanhSachTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -383,6 +396,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\SoDoPhong\FormSoDoPhong.resx">
       <DependentUpon>FormSoDoPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SoDoPhong\FormThongTinPhong.resx">
+      <DependentUpon>FormThongTinPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SoDoPhong\FormDatPhong.resx">
+      <DependentUpon>FormDatPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\TaiKhoan\FormDanhSachTaiKhoan.resx">
       <DependentUpon>FormDanhSachTaiKhoan.cs</DependentUpon>

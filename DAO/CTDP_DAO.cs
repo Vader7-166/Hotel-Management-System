@@ -125,7 +125,7 @@ namespace Hotel_Management_System.DAO
                     ctdp.DaXoa = false;
                     db.CTDPs.AddOrUpdate(ctdp);
                     db.SaveChanges();
-                
+                    
                     instance = null;
                 db.Dispose();
 

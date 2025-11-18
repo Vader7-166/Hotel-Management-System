@@ -211,28 +211,28 @@ namespace Hotel_Management_System.GUI.SoDoPhong
 
         private void CTButtonThemDichVu_Click(object sender, EventArgs e)
         {
-            //FormBackground formBackground = new FormBackground(formMain);
-            //try
-            //{
-            //    using (FormThemDichVuVaoPhong frm = new FormThemDichVuVaoPhong(ctdp))
-            //    {
-            //        formBackground.Owner = formMain;
-            //        formBackground.Show();
-            //        frm.Owner = formBackground;
-            //        frm.ShowDialog();
-            //        this.LoadPage();
-            //        formBackground.Dispose();
-            //    }
-            //}
-            //catch (Exception)
-            //{
-            //    CTMessageBox.Show("Đã xảy ra lỗi! Vui lòng thử lại.", "Thông báo",
-            //                MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-            //finally
-            //{
-            //    formBackground.Dispose();
-            //}
+            FormBackground formBackground = new FormBackground(formMain);
+            try
+            {
+                using (FormThemDichVuVaoPhong frm = new FormThemDichVuVaoPhong(ctdp))
+                {
+                    formBackground.Owner = formMain;
+                    formBackground.Show();
+                    frm.Owner = formBackground;
+                    frm.ShowDialog();
+                    this.LoadPage();
+                    formBackground.Dispose();
+                }
+            }
+            catch (Exception)
+            {
+                CTMessageBox.Show("Đã xảy ra lỗi! Vui lòng thử lại.", "Thông báo",
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                formBackground.Dispose();
+            }
         }
 
         private void CTButtonNhanPhong_Click(object sender, EventArgs e)
@@ -308,21 +308,21 @@ namespace Hotel_Management_System.GUI.SoDoPhong
                     FormBackground formBackground = new FormBackground(formMain);
                     try
                     {
-                        //using (FormHoaDon formHoaDon = new FormHoaDon(HoaDonBUS.Instance.FindHD(hd.MaHD)))
-                        //{
-                        //    formBackground.Owner = formMain;
-                        //    formBackground.Show();
-                        //    formHoaDon.Owner = formBackground;
-                        //    formHoaDon.ShowDialog();
-                        //    formBackground.Dispose();
-                        //}
-                        //CTMessageBox.Show("Thanh toán thành công.", "Thông báo",
-                        //            MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        //this.phong = ctdp.Phong;
-                        //this.phong.TTDD = "Chưa dọn dẹp";
-                        //PhongBUS.Instance.UpdateOrAdd(phong);
-                        //this.LoadPhongTrong();
-                        //this.Close();
+                        using (FormHoaDon formHoaDon = new FormHoaDon(HoaDonBUS.Instance.FindHD(hd.MaHD)))
+                        {
+                            formBackground.Owner = formMain;
+                            formBackground.Show();
+                            formHoaDon.Owner = formBackground;
+                            formHoaDon.ShowDialog();
+                            formBackground.Dispose();
+                        }
+                        CTMessageBox.Show("Thanh toán thành công.", "Thông báo",
+                                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.phong = ctdp.Phong;
+                        this.phong.TTDD = "Chưa dọn dẹp";
+                        PhongBUS.Instance.UpdateOrAdd(phong);
+                        this.LoadPhongTrong();
+                        this.Close();
                     }
                     catch (Exception)
                     {

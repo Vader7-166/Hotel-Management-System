@@ -61,7 +61,9 @@
       <HintPath>packages\Microsoft.Office.Interop.Excel.16.0.18925.20022\lib\net40\Microsoft.Office.Interop.Excel.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -162,6 +164,30 @@
     </Compile>
     <Compile Include="CustomControl\CTRoom.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CTRoomDaDat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CTRoomDaDat.Designer.cs">
+      <DependentUpon>CTRoomDaDat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CTRoomDangSuaChua.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CTRoomDangSuaChua.Designer.cs">
+      <DependentUpon>CTRoomDangSuaChua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CTRoomDangThue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CTRoomDangThue.Designer.cs">
+      <DependentUpon>CTRoomDangThue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\CTRoomTrong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControl\CTRoomTrong.Designer.cs">
+      <DependentUpon>CTRoomTrong.cs</DependentUpon>
     </Compile>
     <Compile Include="CustomControl\CTTextBox.cs">
       <SubType>UserControl</SubType>
@@ -284,6 +310,29 @@
     </Compile>
     <Compile Include="GUI\KhachHang\FormDanhSachKhachHang.Designer.cs">
       <DependentUpon>FormDanhSachKhachHang.cs</DependentUpon>
+    <Compile Include="GUI\DichVu\FormDanhSachDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DichVu\FormDanhSachDichVu.Designer.cs">
+      <DependentUpon>FormDanhSachDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DichVu\FormSuaDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DichVu\FormSuaDichVu.Designer.cs">
+      <DependentUpon>FormSuaDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DichVu\FormThemDichVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DichVu\FormThemDichVu.Designer.cs">
+      <DependentUpon>FormThemDichVu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DichVu\FormThemDichVuVaoPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\DichVu\FormThemDichVuVaoPhong.Designer.cs">
+      <DependentUpon>FormThemDichVuVaoPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\FormKetNoiCSDL.cs">
       <SubType>Form</SubType>
@@ -353,6 +402,18 @@
     <EmbeddedResource Include="CustomControl\CTRoom.resx">
       <DependentUpon>CTRoom.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CTRoomDaDat.resx">
+      <DependentUpon>CTRoomDaDat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CTRoomDangSuaChua.resx">
+      <DependentUpon>CTRoomDangSuaChua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CTRoomDangThue.resx">
+      <DependentUpon>CTRoomDangThue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControl\CTRoomTrong.resx">
+      <DependentUpon>CTRoomTrong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomControl\CTTextBox.resx">
       <DependentUpon>CTTextBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -385,6 +446,17 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\NhanVien\FormDanhSachNhanVien.resx">
       <DependentUpon>FormDanhSachNhanVien.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\DichVu\FormDanhSachDichVu.resx">
+      <DependentUpon>FormDanhSachDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DichVu\FormSuaDichVu.resx">
+      <DependentUpon>FormSuaDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DichVu\FormThemDichVu.resx">
+      <DependentUpon>FormThemDichVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DichVu\FormThemDichVuVaoPhong.resx">
+      <DependentUpon>FormThemDichVuVaoPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\FormKetNoiCSDL.resx">
       <DependentUpon>FormKetNoiCSDL.cs</DependentUpon>

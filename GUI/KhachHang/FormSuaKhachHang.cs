@@ -1,4 +1,5 @@
-﻿using Hotel_Management_System.ApplicationSettings;
+﻿using ApplicationSettings;
+using Hotel_Management_System.ApplicationSettings;
 using Hotel_Management_System.BUS;
 using Hotel_Management_System.CustomControl;
 using Hotel_Management_System.DTO;

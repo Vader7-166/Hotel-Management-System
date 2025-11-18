@@ -65,11 +65,11 @@ namespace Hotel_Management_System.DAO
                 db.SaveChanges();
                 instance = null;
             }
-            catch(Exception)
+            catch (Exception)
             {
                 db.TaiKhoans.Remove(taiKhoan);
             }
-            
+
         }
         public void RemoveTk(TaiKhoan taiKhoan)
         {

@@ -310,6 +310,7 @@
     </Compile>
     <Compile Include="GUI\KhachHang\FormDanhSachKhachHang.Designer.cs">
       <DependentUpon>FormDanhSachKhachHang.cs</DependentUpon>
+	</Compile>
     <Compile Include="GUI\DichVu\FormDanhSachDichVu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -470,6 +471,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\NhanVien\FormDanhSachNhanVien.resx">
       <DependentUpon>FormDanhSachNhanVien.cs</DependentUpon>
+	</EmbeddedResource>
     <EmbeddedResource Include="GUI\DichVu\FormDanhSachDichVu.resx">
       <DependentUpon>FormDanhSachDichVu.cs</DependentUpon>
     </EmbeddedResource>
@@ -493,6 +495,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\HoaDon\FormHoaDon.resx">
       <DependentUpon>FormHoaDon.cs</DependentUpon>
+	</EmbeddedResource>
     <EmbeddedResource Include="GUI\KhachHang\FormSuaKhachHang.resx">
       <DependentUpon>FormSuaKhachHang.cs</DependentUpon>
     </EmbeddedResource>

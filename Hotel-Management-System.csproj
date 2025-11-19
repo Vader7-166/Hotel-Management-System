@@ -287,6 +287,18 @@
     <Compile Include="GUI\DangNhap\FormQuenMatKhauNhapOTP.Designer.cs">
       <DependentUpon>FormQuenMatKhauNhapOTP.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Phongs\FormThemPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Phongs\FormThemPhong.Designer.cs">
+      <DependentUpon>FormThemPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Phongs\FormDanhSachPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Phongs\FormDanhSachPhong.Designer.cs">
+      <DependentUpon>FormDanhSachPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\LoaiPhong\FormDanhSachLoaiPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -528,6 +540,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DangNhap\FormQuenMatKhauNhapOTP.resx">
       <DependentUpon>FormQuenMatKhauNhapOTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Phongs\FormDanhSachPhong.resx">
+      <DependentUpon>FormDanhSachPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\LoaiPhong\FormDanhSachLoaiPhong.resx">
       <DependentUpon>FormDanhSachLoaiPhong.cs</DependentUpon>

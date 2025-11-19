@@ -207,7 +207,7 @@ namespace Hotel_Management_System.GUI
         private void FormThemTaiKhoan_Load(object sender, EventArgs e)
         {
             this.ActiveControl = LabelThemTaiKhoan;
-            CTTextBoxNhapMatKhau.PasswordChar = false;
+            //CTTextBoxNhapMatKhau.PasswordChar = false;
         }
 
         private void LoadForm()
@@ -221,7 +221,8 @@ namespace Hotel_Management_System.GUI
                 {
                     if (taiKhoans.Where(p => p.MaNV == nhanVien.MaNV).Any())
                         continue;
-                    comboBoxMaNV.Items.Add("  " + nhanVien.MaNV);
+                    //comboBoxMaNV.Items.Add("  " + nhanVien.MaNV);
+                    comboBoxMaNV.Items.Add(nhanVien.MaNV);
                 }    
             }
             catch(Exception ex)
@@ -231,11 +232,12 @@ namespace Hotel_Management_System.GUI
         }
         private void CTButtonCapNhat_Click(object sender, EventArgs e)
         {
-            string MaNV = comboBoxMaNV.Text;
+            string MaNVRaw = comboBoxMaNV.Texts;
             string TenTK = CTTextBoxNhapTenTaiKhoan.Texts;
             string MK = CTTextBoxNhapMatKhau.Texts;
             string CapDoQuyen = comboBoxCapDoQuyen.Texts;
-            if (MaNV == "  Mã nhân viên" || TenTK == "" || MK == "" || CapDoQuyen == "  Cấp độ quyền")
+            string MaNV = MaNVRaw.Trim();
+            if (string.IsNullOrWhiteSpace(MaNV) || TenTK == "" || MK == "" || CapDoQuyen == "  Cấp độ quyền")
             {
                 CTMessageBox.Show("Vui lòng nhập đầy đủ thông tin tài khoản.", "Thông báo",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -266,7 +268,7 @@ namespace Hotel_Management_System.GUI
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 CTMessageBox.Show("Đã xảy ra lỗi! Vui lòng thử lại.", "Thông báo",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -282,13 +284,13 @@ namespace Hotel_Management_System.GUI
 
         }
 
-        private void CTTextBoxNhapMatKhau__TextChanged(object sender, EventArgs e)
-        {
-            TextBox textBoxPasswordConfirm = sender as TextBox;
-            if (textBoxPasswordConfirm.Focused == false)
-                textBoxPasswordConfirm.UseSystemPasswordChar = false;
-            else
-                textBoxPasswordConfirm.UseSystemPasswordChar = true;
-        }
+        //private void CTTextBoxNhapMatKhau__TextChanged(object sender, EventArgs e)
+        //{
+        //    TextBox textBoxPasswordConfirm = sender as TextBox;
+        //    if (textBoxPasswordConfirm.Focused == false)
+        //        textBoxPasswordConfirm.UseSystemPasswordChar = true;
+        //    else
+        //        textBoxPasswordConfirm.UseSystemPasswordChar = true;
+        //}
     }
 }

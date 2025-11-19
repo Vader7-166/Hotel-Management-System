@@ -98,7 +98,6 @@ namespace Hotel_Management_System.GUI.SoDoPhong
                 LoadgridPhongTrong();
                 LoadGridPhongDat();
                 setLoadComboBox();
-                LoadTimeItems();
                 LoadTenKH();
             }
             catch (Exception ex)
@@ -106,25 +105,7 @@ namespace Hotel_Management_System.GUI.SoDoPhong
                 MessageBox.Show(ex.Message);
             }
         }
-        private void LoadTimeItems()
-        {
-            List<string> timeSlots = new List<string>();
-            for (int h = 0; h < 12; h++)
-            {
-                string hour = (h == 0 ? 12 : h).ToString("00");
-                timeSlots.Add(hour + ":00");
-                timeSlots.Add(hour + ":30");
-            }
-
-            cbBoxGioBatDau.Items.AddRange(timeSlots.ToArray());
-            cbBoxGioKetThuc.Items.AddRange(timeSlots.ToArray());
-
-            cbBoxLetterBatDau.Items.AddRange(new string[] { "AM", "PM" });
-            cbBoxLetterKetThuc.Items.AddRange(new string[] { "AM", "PM" });
-
-            ComboBoxGioiTinh.Items.Add("Nam");
-            ComboBoxGioiTinh.Items.Add("Nữ");
-        }
+       
         private void LoadTenKH()
         {
             try

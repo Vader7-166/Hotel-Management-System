@@ -552,7 +552,7 @@ namespace Hotel_Management_System
             ButtonPhong.BackColor = Color.FromArgb(233, 117, 32);
             ButtonPhong.ForeColor = Color.White;
             //Open Child Form
-         //   openChildForm(new FormDanhSachPhong(this,this.taiKhoan));
+            openChildForm(new FormDanhSachPhong(this,this.taiKhoan));
         }
 
         private void ButtonLoaiPhong_Click(object sender, EventArgs e)

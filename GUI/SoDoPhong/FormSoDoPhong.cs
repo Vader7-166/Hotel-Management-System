@@ -30,6 +30,21 @@ namespace Hotel_Management_System.GUI.SoDoPhong
             this.formMain = formMain;
             this.taiKhoan = taiKhoan;
             LoadLanDau();
+            LoadTimeItems();
+        }
+        private void LoadTimeItems()
+        {
+            List<string> timeSlots = new List<string>();
+            for (int h = 0; h < 12; h++)
+            {
+                string hour = (h == 0 ? 12 : h).ToString("00");
+                timeSlots.Add(hour + ":00");
+                timeSlots.Add(hour + ":30");
+            }
+
+            cbBoxGio.Items.AddRange(timeSlots.ToArray());
+
+            cbBoxLetter.Items.AddRange(new string[] { "AM", "PM" });
         }
         public void LoadAllPhong()
         {

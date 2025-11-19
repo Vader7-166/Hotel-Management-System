@@ -311,227 +311,245 @@
 		<Compile Include="GUI\KhachHang\FormDanhSachKhachHang.Designer.cs">
 			<DependentUpon>FormDanhSachKhachHang.cs</DependentUpon>
 		</Compile>
-			<Compile Include="GUI\DichVu\FormDanhSachDichVu.cs">
-				<SubType>Form</SubType>
-			</Compile>
-			<Compile Include="GUI\DichVu\FormDanhSachDichVu.Designer.cs">
-				<DependentUpon>FormDanhSachDichVu.cs</DependentUpon>
-			</Compile>
-			<Compile Include="GUI\DichVu\FormSuaDichVu.cs">
-				<SubType>Form</SubType>
-			</Compile>
-			<Compile Include="GUI\DichVu\FormSuaDichVu.Designer.cs">
-				<DependentUpon>FormSuaDichVu.cs</DependentUpon>
-			</Compile>
-			<Compile Include="GUI\DichVu\FormThemDichVu.cs">
-				<SubType>Form</SubType>
-			</Compile>
-			<Compile Include="GUI\DichVu\FormThemDichVu.Designer.cs">
-				<DependentUpon>FormThemDichVu.cs</DependentUpon>
-			</Compile>
-			<Compile Include="GUI\DichVu\FormThemDichVuVaoPhong.cs">
-				<SubType>Form</SubType>
-			</Compile>
-			<Compile Include="GUI\DichVu\FormThemDichVuVaoPhong.Designer.cs">
-				<DependentUpon>FormThemDichVuVaoPhong.cs</DependentUpon>
-			</Compile>
-			<Compile Include="GUI\FormKetNoiCSDL.cs">
-				<SubType>Form</SubType>
-			</Compile>
-			<Compile Include="GUI\FormKetNoiCSDL.Designer.cs">
-				<DependentUpon>FormKetNoiCSDL.cs</DependentUpon>
-			</Compile>
-			<Compile Include="GUI\FormMain.cs">
-				<SubType>Form</SubType>
-			</Compile>
-			<Compile Include="GUI\FormMain.Designer.cs">
-				<DependentUpon>FormMain.cs</DependentUpon>
-			</Compile>
-			<Compile Include="GUI\HoaDon\FormDanhSachHoaDon.cs">
-				<SubType>Form</SubType>
-			</Compile>
-			<Compile Include="GUI\HoaDon\FormDanhSachHoaDon.Designer.cs">
-				<DependentUpon>FormDanhSachHoaDon.cs</DependentUpon>
-			</Compile>
-			<Compile Include="GUI\HoaDon\FormHoaDon.cs">
-				<SubType>Form</SubType>
-			</Compile>
-			<Compile Include="GUI\HoaDon\FormHoaDon.Designer.cs">
-				<DependentUpon>FormHoaDon.cs</DependentUpon>
-			</Compile>
-			<Compile Include="GUI\SoDoPhong\FormSoDoPhong.cs">
-				<SubType>Form</SubType>
-			</Compile>
-			<Compile Include="GUI\SoDoPhong\FormSoDoPhong.Designer.cs">
-				<DependentUpon>FormSoDoPhong.cs</DependentUpon>
-			</Compile>
-			<Compile Include="GUI\TaiKhoan\FormDanhSachTaiKhoan.cs">
-				<SubType>Form</SubType>
-			</Compile>
-			<Compile Include="GUI\TaiKhoan\FormDanhSachTaiKhoan.Designer.cs">
-				<DependentUpon>FormDanhSachTaiKhoan.cs</DependentUpon>
-			</Compile>
-			<Compile Include="GUI\TaiKhoan\FormSuaTaiKhoan.cs">
-				<SubType>Form</SubType>
-			</Compile>
-			<Compile Include="GUI\TaiKhoan\FormSuaTaiKhoan.Designer.cs">
-				<DependentUpon>FormSuaTaiKhoan.cs</DependentUpon>
-			</Compile>
-			<Compile Include="GUI\TaiKhoan\FormThemTaiKhoan.cs">
-				<SubType>Form</SubType>
-			</Compile>
-			<Compile Include="GUI\TaiKhoan\FormThemTaiKhoan.Designer.cs">
-				<DependentUpon>FormThemTaiKhoan.cs</DependentUpon>
-			</Compile>
-			<Compile Include="Program.cs" />
-			<Compile Include="Properties\AssemblyInfo.cs" />
-			<EmbeddedResource Include="CustomControl\CCClose.resx">
-				<DependentUpon>CCClose.cs</DependentUpon>
-			</EmbeddedResource>
-			<EmbeddedResource Include="CustomControl\CCMinimize.resx">
-				<DependentUpon>CCMinimize.cs</DependentUpon>
-			</EmbeddedResource>
-			<EmbeddedResource Include="CustomControl\CTBorderPanel.resx">
-				<DependentUpon>CTBorderPanel.cs</DependentUpon>
-			</EmbeddedResource>
-			<EmbeddedResource Include="CustomControl\CTClose.resx">
-				<DependentUpon>CTClose.cs</DependentUpon>
-			</EmbeddedResource>
-			<EmbeddedResource Include="CustomControl\CTEyePassword.resx">
-				<DependentUpon>CTEyePassword.cs</DependentUpon>
-			</EmbeddedResource>
-			<EmbeddedResource Include="CustomControl\CTMaximize.resx">
-				<DependentUpon>CTMaximize.cs</DependentUpon>
-			</EmbeddedResource>
-			<EmbeddedResource Include="CustomControl\CTMinimize.resx">
-				<DependentUpon>CTMinimize.cs</DependentUpon>
-			</EmbeddedResource>
-			<EmbeddedResource Include="CustomControl\CTNone.resx">
-				<DependentUpon>CTNone.cs</DependentUpon>
-			</EmbeddedResource>
-			<EmbeddedResource Include="CustomControl\CTPanel.resx">
-				<DependentUpon>CTPanel.cs</DependentUpon>
-			</EmbeddedResource>
-			<EmbeddedResource Include="CustomControl\CTRoom.resx">
-				<DependentUpon>CTRoom.cs</DependentUpon>
-			</EmbeddedResource>
-			<EmbeddedResource Include="CustomControl\CTRoomDaDat.resx">
-				<DependentUpon>CTRoomDaDat.cs</DependentUpon>
-			</EmbeddedResource>
-			<EmbeddedResource Include="CustomControl\CTRoomDangSuaChua.resx">
-				<DependentUpon>CTRoomDangSuaChua.cs</DependentUpon>
-			</EmbeddedResource>
-			<EmbeddedResource Include="CustomControl\CTRoomDangThue.resx">
-				<DependentUpon>CTRoomDangThue.cs</DependentUpon>
-			</EmbeddedResource>
-			<EmbeddedResource Include="CustomControl\CTRoomTrong.resx">
-				<DependentUpon>CTRoomTrong.cs</DependentUpon>
-			</EmbeddedResource>
-			<EmbeddedResource Include="CustomControl\CTTextBox.resx">
-				<DependentUpon>CTTextBox.cs</DependentUpon>
-			</EmbeddedResource>
-			<EmbeddedResource Include="CustomControl\FormBackground.resx">
-				<DependentUpon>FormBackground.cs</DependentUpon>
-			</EmbeddedResource>
-			<EmbeddedResource Include="CustomControl\FormMessageBox.resx">
-				<DependentUpon>FormMessageBox.cs</DependentUpon>
-			</EmbeddedResource>
-			<EmbeddedResource Include="FormTrangChu.resx">
-				<DependentUpon>FormTrangChu.cs</DependentUpon>
-			</EmbeddedResource>
-			<EmbeddedResource Include="GUI\DangNhap\FormDangNhap.resx">
-				<DependentUpon>FormDangNhap.cs</DependentUpon>
-			</EmbeddedResource>
-			<EmbeddedResource Include="GUI\DangNhap\FormDatLaiMatKhau.resx">
-				<DependentUpon>FormDatLaiMatKhau.cs</DependentUpon>
-			</EmbeddedResource>
-			<EmbeddedResource Include="GUI\DangNhap\FormLogin.resx">
-				<DependentUpon>FormLogin.cs</DependentUpon>
-			</EmbeddedResource>
-			<EmbeddedResource Include="GUI\DangNhap\FormQuenMatKhauLayOTP.resx">
-				<DependentUpon>FormQuenMatKhauLayOTP.cs</DependentUpon>
-			</EmbeddedResource>
-			<EmbeddedResource Include="GUI\DangNhap\FormQuenMatKhauNhapOTP.resx">
-				<DependentUpon>FormQuenMatKhauNhapOTP.cs</DependentUpon>
-			</EmbeddedResource>
-			<EmbeddedResource Include="GUI\NhanVien\FormSuaNhanVien.resx">
-				<DependentUpon>FormSuaNhanVien.cs</DependentUpon>
-			</EmbeddedResource>
-			<EmbeddedResource Include="GUI\NhanVien\FormDanhSachNhanVien.resx">
-				<DependentUpon>FormDanhSachNhanVien.cs</DependentUpon>
-			</EmbeddedResource>
-				<EmbeddedResource Include="GUI\DichVu\FormDanhSachDichVu.resx">
-					<DependentUpon>FormDanhSachDichVu.cs</DependentUpon>
-				</EmbeddedResource>
-				<EmbeddedResource Include="GUI\DichVu\FormSuaDichVu.resx">
-					<DependentUpon>FormSuaDichVu.cs</DependentUpon>
-				</EmbeddedResource>
-				<EmbeddedResource Include="GUI\DichVu\FormThemDichVu.resx">
-					<DependentUpon>FormThemDichVu.cs</DependentUpon>
-				</EmbeddedResource>
-				<EmbeddedResource Include="GUI\DichVu\FormThemDichVuVaoPhong.resx">
-					<DependentUpon>FormThemDichVuVaoPhong.cs</DependentUpon>
-				</EmbeddedResource>
-				<EmbeddedResource Include="GUI\FormKetNoiCSDL.resx">
-					<DependentUpon>FormKetNoiCSDL.cs</DependentUpon>
-				</EmbeddedResource>
-				<EmbeddedResource Include="GUI\FormMain.resx">
-					<DependentUpon>FormMain.cs</DependentUpon>
-				</EmbeddedResource>
-				<EmbeddedResource Include="GUI\HoaDon\FormDanhSachHoaDon.resx">
-					<DependentUpon>FormDanhSachHoaDon.cs</DependentUpon>
-				</EmbeddedResource>
-			<EmbeddedResource Include="GUI\HoaDon\FormHoaDon.resx">
-				<DependentUpon>FormHoaDon.cs</DependentUpon>
-			</EmbeddedResource>
-					<EmbeddedResource Include="GUI\KhachHang\FormSuaKhachHang.resx">
-						<DependentUpon>FormSuaKhachHang.cs</DependentUpon>
-					</EmbeddedResource>
-					<EmbeddedResource Include="GUI\KhachHang\FormDanhSachKhachHang.resx">
-						<DependentUpon>FormDanhSachKhachHang.cs</DependentUpon>
-					</EmbeddedResource>
-					<EmbeddedResource Include="GUI\KhachHang\FormThemKhachHang.resx">
-						<DependentUpon>FormThemKhachHang.cs</DependentUpon>
-					</EmbeddedResource>
-					<EmbeddedResource Include="GUI\NhanVien\FormThemNhanVien.resx">
-						<DependentUpon>FormThemNhanVien.cs</DependentUpon>
-					</EmbeddedResource>
-					<EmbeddedResource Include="GUI\NhanVien\FormThongTinNhanVien.resx">
-						<DependentUpon>FormThongTinNhanVien.cs</DependentUpon>
-					</EmbeddedResource>
-					<EmbeddedResource Include="GUI\SoDoPhong\FormSoDoPhong.resx">
-						<DependentUpon>FormSoDoPhong.cs</DependentUpon>
-					</EmbeddedResource>
-					<EmbeddedResource Include="GUI\TaiKhoan\FormDanhSachTaiKhoan.resx">
-						<DependentUpon>FormDanhSachTaiKhoan.cs</DependentUpon>
-					</EmbeddedResource>
-					<EmbeddedResource Include="GUI\TaiKhoan\FormSuaTaiKhoan.resx">
-						<DependentUpon>FormSuaTaiKhoan.cs</DependentUpon>
-					</EmbeddedResource>
-					<EmbeddedResource Include="GUI\TaiKhoan\FormThemTaiKhoan.resx">
-						<DependentUpon>FormThemTaiKhoan.cs</DependentUpon>
-					</EmbeddedResource>
-					<EmbeddedResource Include="Properties\Resources.resx">
-						<Generator>ResXFileCodeGenerator</Generator>
-						<LastGenOutput>Resources.Designer.cs</LastGenOutput>
-						<SubType>Designer</SubType>
-					</EmbeddedResource>
-					<Compile Include="Properties\Resources.Designer.cs">
-						<AutoGen>True</AutoGen>
-						<DependentUpon>Resources.resx</DependentUpon>
-						<DesignTime>True</DesignTime>
-					</Compile>
-					<None Include="packages.config" />
-					<None Include="Properties\Settings.settings">
-						<Generator>SettingsSingleFileGenerator</Generator>
-						<LastGenOutput>Settings.Designer.cs</LastGenOutput>
-					</None>
-					<Compile Include="Properties\Settings.Designer.cs">
-						<AutoGen>True</AutoGen>
-						<DependentUpon>Settings.settings</DependentUpon>
-						<DesignTimeSharedInput>True</DesignTimeSharedInput>
-					</Compile>
-				</ItemGroup>
+		<Compile Include="GUI\DichVu\FormDanhSachDichVu.cs">
+			<SubType>Form</SubType>
+		</Compile>
+		<Compile Include="GUI\DichVu\FormDanhSachDichVu.Designer.cs">
+			<DependentUpon>FormDanhSachDichVu.cs</DependentUpon>
+		</Compile>
+		<Compile Include="GUI\DichVu\FormSuaDichVu.cs">
+			<SubType>Form</SubType>
+		</Compile>
+		<Compile Include="GUI\DichVu\FormSuaDichVu.Designer.cs">
+			<DependentUpon>FormSuaDichVu.cs</DependentUpon>
+		</Compile>
+		<Compile Include="GUI\DichVu\FormThemDichVu.cs">
+			<SubType>Form</SubType>
+		</Compile>
+		<Compile Include="GUI\DichVu\FormThemDichVu.Designer.cs">
+			<DependentUpon>FormThemDichVu.cs</DependentUpon>
+		</Compile>
+		<Compile Include="GUI\DichVu\FormThemDichVuVaoPhong.cs">
+			<SubType>Form</SubType>
+		</Compile>
+		<Compile Include="GUI\DichVu\FormThemDichVuVaoPhong.Designer.cs">
+			<DependentUpon>FormThemDichVuVaoPhong.cs</DependentUpon>
+		</Compile>
+		<Compile Include="GUI\FormKetNoiCSDL.cs">
+			<SubType>Form</SubType>
+		</Compile>
+		<Compile Include="GUI\FormKetNoiCSDL.Designer.cs">
+			<DependentUpon>FormKetNoiCSDL.cs</DependentUpon>
+		</Compile>
+		<Compile Include="GUI\FormMain.cs">
+			<SubType>Form</SubType>
+		</Compile>
+		<Compile Include="GUI\FormMain.Designer.cs">
+			<DependentUpon>FormMain.cs</DependentUpon>
+		</Compile>
+		<Compile Include="GUI\HoaDon\FormDanhSachHoaDon.cs">
+			<SubType>Form</SubType>
+		</Compile>
+		<Compile Include="GUI\HoaDon\FormDanhSachHoaDon.Designer.cs">
+			<DependentUpon>FormDanhSachHoaDon.cs</DependentUpon>
+		</Compile>
+		<Compile Include="GUI\HoaDon\FormHoaDon.cs">
+			<SubType>Form</SubType>
+		</Compile>
+		<Compile Include="GUI\HoaDon\FormHoaDon.Designer.cs">
+			<DependentUpon>FormHoaDon.cs</DependentUpon>
+		</Compile>
+		<Compile Include="GUI\SoDoPhong\FormSoDoPhong.cs">
+			<SubType>Form</SubType>
+		</Compile>
+		<Compile Include="GUI\SoDoPhong\FormSoDoPhong.Designer.cs">
+			<DependentUpon>FormSoDoPhong.cs</DependentUpon>
+		</Compile>
+		<Compile Include="GUI\SoDoPhong\FormThongTinPhong.cs">
+			<SubType>Form</SubType>
+		</Compile>
+		<Compile Include="GUI\SoDoPhong\FormThongTinPhong.Designer.cs">
+			<DependentUpon>FormThongTinPhong.cs</DependentUpon>
+		</Compile>
+		<Compile Include="GUI\SoDoPhong\FormDatPhong.cs">
+			<SubType>Form</SubType>
+		</Compile>
+		<Compile Include="GUI\SoDoPhong\FormDatPhong.Designer.cs">
+			<DependentUpon>FormDatPhong.cs</DependentUpon>
+		</Compile>
+		<Compile Include="GUI\TaiKhoan\FormDanhSachTaiKhoan.cs">
+			<SubType>Form</SubType>
+		</Compile>
+		<Compile Include="GUI\TaiKhoan\FormDanhSachTaiKhoan.Designer.cs">
+			<DependentUpon>FormDanhSachTaiKhoan.cs</DependentUpon>
+		</Compile>
+		<Compile Include="GUI\TaiKhoan\FormSuaTaiKhoan.cs">
+			<SubType>Form</SubType>
+		</Compile>
+		<Compile Include="GUI\TaiKhoan\FormSuaTaiKhoan.Designer.cs">
+			<DependentUpon>FormSuaTaiKhoan.cs</DependentUpon>
+		</Compile>
+		<Compile Include="GUI\TaiKhoan\FormThemTaiKhoan.cs">
+			<SubType>Form</SubType>
+		</Compile>
+		<Compile Include="GUI\TaiKhoan\FormThemTaiKhoan.Designer.cs">
+			<DependentUpon>FormThemTaiKhoan.cs</DependentUpon>
+		</Compile>
+		<Compile Include="Program.cs" />
+		<Compile Include="Properties\AssemblyInfo.cs" />
+		<EmbeddedResource Include="CustomControl\CCClose.resx">
+			<DependentUpon>CCClose.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="CustomControl\CCMinimize.resx">
+			<DependentUpon>CCMinimize.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="CustomControl\CTBorderPanel.resx">
+			<DependentUpon>CTBorderPanel.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="CustomControl\CTClose.resx">
+			<DependentUpon>CTClose.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="CustomControl\CTEyePassword.resx">
+			<DependentUpon>CTEyePassword.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="CustomControl\CTMaximize.resx">
+			<DependentUpon>CTMaximize.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="CustomControl\CTMinimize.resx">
+			<DependentUpon>CTMinimize.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="CustomControl\CTNone.resx">
+			<DependentUpon>CTNone.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="CustomControl\CTPanel.resx">
+			<DependentUpon>CTPanel.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="CustomControl\CTRoom.resx">
+			<DependentUpon>CTRoom.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="CustomControl\CTRoomDaDat.resx">
+			<DependentUpon>CTRoomDaDat.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="CustomControl\CTRoomDangSuaChua.resx">
+			<DependentUpon>CTRoomDangSuaChua.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="CustomControl\CTRoomDangThue.resx">
+			<DependentUpon>CTRoomDangThue.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="CustomControl\CTRoomTrong.resx">
+			<DependentUpon>CTRoomTrong.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="CustomControl\CTTextBox.resx">
+			<DependentUpon>CTTextBox.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="CustomControl\FormBackground.resx">
+			<DependentUpon>FormBackground.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="CustomControl\FormMessageBox.resx">
+			<DependentUpon>FormMessageBox.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="FormTrangChu.resx">
+			<DependentUpon>FormTrangChu.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="GUI\DangNhap\FormDangNhap.resx">
+			<DependentUpon>FormDangNhap.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="GUI\DangNhap\FormDatLaiMatKhau.resx">
+			<DependentUpon>FormDatLaiMatKhau.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="GUI\DangNhap\FormLogin.resx">
+			<DependentUpon>FormLogin.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="GUI\DangNhap\FormQuenMatKhauLayOTP.resx">
+			<DependentUpon>FormQuenMatKhauLayOTP.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="GUI\DangNhap\FormQuenMatKhauNhapOTP.resx">
+			<DependentUpon>FormQuenMatKhauNhapOTP.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="GUI\NhanVien\FormSuaNhanVien.resx">
+			<DependentUpon>FormSuaNhanVien.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="GUI\NhanVien\FormDanhSachNhanVien.resx">
+			<DependentUpon>FormDanhSachNhanVien.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="GUI\DichVu\FormDanhSachDichVu.resx">
+			<DependentUpon>FormDanhSachDichVu.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="GUI\DichVu\FormSuaDichVu.resx">
+			<DependentUpon>FormSuaDichVu.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="GUI\DichVu\FormThemDichVu.resx">
+			<DependentUpon>FormThemDichVu.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="GUI\DichVu\FormThemDichVuVaoPhong.resx">
+			<DependentUpon>FormThemDichVuVaoPhong.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="GUI\FormKetNoiCSDL.resx">
+			<DependentUpon>FormKetNoiCSDL.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="GUI\FormMain.resx">
+			<DependentUpon>FormMain.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="GUI\HoaDon\FormDanhSachHoaDon.resx">
+			<DependentUpon>FormDanhSachHoaDon.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="GUI\HoaDon\FormHoaDon.resx">
+			<DependentUpon>FormHoaDon.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="GUI\KhachHang\FormSuaKhachHang.resx">
+			<DependentUpon>FormSuaKhachHang.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="GUI\KhachHang\FormDanhSachKhachHang.resx">
+			<DependentUpon>FormDanhSachKhachHang.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="GUI\KhachHang\FormThemKhachHang.resx">
+			<DependentUpon>FormThemKhachHang.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="GUI\NhanVien\FormThemNhanVien.resx">
+			<DependentUpon>FormThemNhanVien.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="GUI\NhanVien\FormThongTinNhanVien.resx">
+			<DependentUpon>FormThongTinNhanVien.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="GUI\SoDoPhong\FormSoDoPhong.resx">
+			<DependentUpon>FormSoDoPhong.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="GUI\SoDoPhong\FormThongTinPhong.resx">
+			<DependentUpon>FormThongTinPhong.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="GUI\SoDoPhong\FormDatPhong.resx">
+			<DependentUpon>FormDatPhong.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="GUI\TaiKhoan\FormDanhSachTaiKhoan.resx">
+			<DependentUpon>FormDanhSachTaiKhoan.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="GUI\TaiKhoan\FormSuaTaiKhoan.resx">
+			<DependentUpon>FormSuaTaiKhoan.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="GUI\TaiKhoan\FormThemTaiKhoan.resx">
+			<DependentUpon>FormThemTaiKhoan.cs</DependentUpon>
+		</EmbeddedResource>
+		<EmbeddedResource Include="Properties\Resources.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>Resources.Designer.cs</LastGenOutput>
+			<SubType>Designer</SubType>
+		</EmbeddedResource>
+		<Compile Include="Properties\Resources.Designer.cs">
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Resources.resx</DependentUpon>
+			<DesignTime>True</DesignTime>
+		</Compile>
+		<None Include="packages.config" />
+		<None Include="Properties\Settings.settings">
+			<Generator>SettingsSingleFileGenerator</Generator>
+			<LastGenOutput>Settings.Designer.cs</LastGenOutput>
+		</None>
+		<Compile Include="Properties\Settings.Designer.cs">
+			<AutoGen>True</AutoGen>
+			<DependentUpon>Settings.settings</DependentUpon>
+			<DesignTimeSharedInput>True</DesignTimeSharedInput>
+		</Compile>
+	</ItemGroup>
 	<ItemGroup>
 		<None Include="App.config" />
 	</ItemGroup>

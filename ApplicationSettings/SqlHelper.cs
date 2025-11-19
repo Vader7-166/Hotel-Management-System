@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hotel_Management_System.BUS;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;

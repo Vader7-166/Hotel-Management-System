@@ -503,7 +503,7 @@ namespace Hotel_Management_System
             ButtonDanhSachDatPhong.BackColor = Color.FromArgb(233, 117, 32);
             ButtonDanhSachDatPhong.ForeColor = Color.White;
             //Open Child Form
-          //  openChildForm(new FormDanhSachPhieuThue(this,taiKhoan));
+            openChildForm(new FormDanhSachPhieuThue(this,taiKhoan));
         }
 
         private void ButtonSoDoPhong_Click(object sender, EventArgs e)

@@ -287,6 +287,18 @@
     <Compile Include="GUI\DangNhap\FormQuenMatKhauNhapOTP.Designer.cs">
       <DependentUpon>FormQuenMatKhauNhapOTP.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\PhieuThue\FormChiTietPhieuThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PhieuThue\FormChiTietPhieuThue.Designer.cs">
+      <DependentUpon>FormChiTietPhieuThue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\PhieuThue\FormDanhSachPhieuThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\PhieuThue\FormDanhSachPhieuThue.Designer.cs">
+      <DependentUpon>FormDanhSachPhieuThue.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Phongs\FormSuaPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -552,6 +564,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DangNhap\FormQuenMatKhauNhapOTP.resx">
       <DependentUpon>FormQuenMatKhauNhapOTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PhieuThue\FormChiTietPhieuThue.resx">
+      <DependentUpon>FormChiTietPhieuThue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\PhieuThue\FormDanhSachPhieuThue.resx">
+      <DependentUpon>FormDanhSachPhieuThue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Phongs\FormDanhSachPhong.resx">
       <DependentUpon>FormDanhSachPhong.cs</DependentUpon>

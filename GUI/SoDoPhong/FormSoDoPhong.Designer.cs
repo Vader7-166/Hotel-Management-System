@@ -471,6 +471,9 @@ namespace Hotel_Management_System.GUI.SoDoPhong
             this.cbBoxLetter.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbBoxLetter.ForeColor = System.Drawing.Color.Black;
             this.cbBoxLetter.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(145)))), ((int)(((byte)(175)))));
+            this.cbBoxLetter.Items.AddRange(new object[] {
+            "AM",
+            "PM"});
             this.cbBoxLetter.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.cbBoxLetter.ListTextColor = System.Drawing.Color.Black;
             this.cbBoxLetter.Location = new System.Drawing.Point(294, 15);
@@ -490,6 +493,31 @@ namespace Hotel_Management_System.GUI.SoDoPhong
             this.cbBoxGio.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbBoxGio.ForeColor = System.Drawing.Color.Black;
             this.cbBoxGio.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(145)))), ((int)(((byte)(175)))));
+            this.cbBoxGio.Items.AddRange(new object[] {
+            "01:00",
+            "01:30",
+            "02:00",
+            "02:30",
+            "03:00",
+            "03:30",
+            "04:00",
+            "04:30",
+            "05:00",
+            "05:30",
+            "06:00",
+            "06:30",
+            "07:00",
+            "07:30",
+            "08:00",
+            "08:30",
+            "09:00",
+            "09:30",
+            "10:00",
+            "10:30",
+            "11:00",
+            "11:30",
+            "12:00",
+            "12:30"});
             this.cbBoxGio.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(236)))), ((int)(((byte)(236)))));
             this.cbBoxGio.ListTextColor = System.Drawing.Color.Black;
             this.cbBoxGio.Location = new System.Drawing.Point(208, 15);

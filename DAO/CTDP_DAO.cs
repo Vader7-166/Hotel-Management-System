@@ -31,18 +31,18 @@ namespace Hotel_Management_System.DAO
             TimeSpan timeSpan = new TimeSpan();
             HotelDTO db = new HotelDTO();
             
-                ctdp = db.CTDPs.Find(MaCTDP);
+            ctdp = db.CTDPs.Find(MaCTDP);
             
             DateTime checkin = new DateTime();
-                DateTime checkout = new DateTime();
+            DateTime checkout = new DateTime();
                
-                if (ctdp != null)
-                {
-                    checkin = ctdp.CheckIn;
-                    checkout = ctdp.CheckOut;
-                    timeSpan = checkout.Subtract(checkin);
-                }
-              return timeSpan.Days;
+            if (ctdp != null)
+            {
+                checkin = ctdp.CheckIn;
+                checkout = ctdp.CheckOut;
+                timeSpan = checkout.Subtract(checkin);
+            }
+            return timeSpan.Days;
         }
         public int getKhoangTGTheoGio(string MaCTDP)
         {

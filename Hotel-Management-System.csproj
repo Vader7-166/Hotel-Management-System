@@ -583,6 +583,9 @@
     <EmbeddedResource Include="GUI\NhanVien\FormThongTinNhanVien.resx">
       <DependentUpon>FormThongTinNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Phongs\FormThemPhong.resx">
+      <DependentUpon>FormThemPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\SoDoPhong\FormSoDoPhong.resx">
       <DependentUpon>FormSoDoPhong.cs</DependentUpon>
     </EmbeddedResource>

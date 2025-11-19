@@ -170,5 +170,10 @@ namespace Hotel_Management_System.GUI.ThongKe
                 CTMessageBox.Show(ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void FormThongKe_Load(object sender, EventArgs e)
+        {
+            this.ActiveControl = LabelThongKe;
+        }
     }
 }

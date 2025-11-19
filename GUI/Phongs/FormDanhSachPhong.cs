@@ -156,15 +156,15 @@ namespace Hotel_Management_System.GUI
                     FormBackground formBackground = new FormBackground(formMain);
                     try
                     {
-                        //string MaPH = grid.Rows[y].Cells[1].Value.ToString();
-                        //using (FormSuaPhong formSuaPhong = new FormSuaPhong(PhongBUS.Instance.FindePhong(MaPH)))
-                        //{
-                        //    formBackground.Owner = formMain;
-                        //    formBackground.Show();
-                        //    formSuaPhong.Owner = formBackground;
-                        //    formSuaPhong.ShowDialog();
-                        //    formBackground.Dispose();
-                        //}
+                        string MaPH = grid.Rows[y].Cells[1].Value.ToString();
+                        using (FormSuaPhong formSuaPhong = new FormSuaPhong(PhongBUS.Instance.FindePhong(MaPH)))
+                        {
+                            formBackground.Owner = formMain;
+                            formBackground.Show();
+                            formSuaPhong.Owner = formBackground;
+                            formSuaPhong.ShowDialog();
+                            formBackground.Dispose();
+                        }
                     }
                     catch (Exception)
                     {

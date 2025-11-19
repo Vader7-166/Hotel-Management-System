@@ -42,10 +42,10 @@ namespace Hotel_Management_System.GUI
             this.ButtonResend.Enabled = false;
             timer1.Start();
             this.OTP = random.Next(10000, 99999).ToString();
-            MailMessage mail = new MailMessage("tbtcooperation@gmail.com", emailto);
+            MailMessage mail = new MailMessage("hamanhthe2005@gmail.com", emailto);
             string pass;
 
-            pass = "rmlppremfdeqdfjt";
+            pass = "oqcu kwxd swek qpwa";
             mail.Subject = " Đặt lại mật khẩu tài khoản ứng dụng Quản lý khách sạn";
             // mail.From = new MailAddress(from);
             mail.IsBodyHtml = true;
@@ -58,7 +58,7 @@ namespace Hotel_Management_System.GUI
             smtp.EnableSsl = true;
             smtp.Port = 587;
             smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-            smtp.Credentials = new NetworkCredential("tbtcooperation@gmail.com", pass);
+            smtp.Credentials = new NetworkCredential("hamanhthe2005@gmail.com", pass);
             try
             {
                 smtp.Send(mail);

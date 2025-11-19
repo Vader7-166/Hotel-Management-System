@@ -54,5 +54,10 @@ namespace Hotel_Management_System.GUI
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void FormQuenMatKhauLayOTP_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -88,7 +88,7 @@
             this.TextBoxEmail.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.TextBoxEmail.PlaceholderText = "Email";
             this.TextBoxEmail.ReadOnly = false;
-            this.TextBoxEmail.Size = new System.Drawing.Size(286, 45);
+            this.TextBoxEmail.Size = new System.Drawing.Size(286, 52);
             this.TextBoxEmail.TabIndex = 4;
             this.TextBoxEmail.Texts = "";
             this.TextBoxEmail.UnderlineedStyle = false;
@@ -111,7 +111,7 @@
             this.textBoxUsername.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.textBoxUsername.PlaceholderText = "Tên tài khoản";
             this.textBoxUsername.ReadOnly = false;
-            this.textBoxUsername.Size = new System.Drawing.Size(286, 45);
+            this.textBoxUsername.Size = new System.Drawing.Size(286, 52);
             this.textBoxUsername.TabIndex = 3;
             this.textBoxUsername.Texts = "";
             this.textBoxUsername.UnderlineedStyle = false;
@@ -142,6 +142,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "FormQuenMatKhau";
+            this.Load += new System.EventHandler(this.FormQuenMatKhauLayOTP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);

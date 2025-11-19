@@ -1,22 +1,23 @@
-﻿using Hotel_Management_System.GUI;
+﻿using ApplicationSettings;
+using Hotel_Management_System.CustomControl;
+//using Hotel_Management_System.GUI.ThongKe;
+using Hotel_Management_System.DTO;
+using Hotel_Management_System.GUI;
+using Hotel_Management_System.GUI.SoDoPhong;
+using Hotel_Management_System.GUI.ThongKe;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ApplicationSettings;
-//using Hotel_Management_System.GUI.ThongKe;
-using Hotel_Management_System.DTO;
-using System.IO;
-using Hotel_Management_System.CustomControl;
-using Hotel_Management_System.GUI.SoDoPhong;
 namespace Hotel_Management_System
 {
     public partial class FormMain : Form
@@ -615,9 +616,9 @@ namespace Hotel_Management_System
             //Change color button on side bar
             SetAllButtonNormalColor();
             ButtonThongKe.BackColor = Color.FromArgb(233, 117, 32);
-            
+
             //Open Child Form
-         //   openChildForm(new FormThongKe(this));
+            openChildForm(new FormThongKe(this));
         }
         private void DisplayTextMenu()
         {

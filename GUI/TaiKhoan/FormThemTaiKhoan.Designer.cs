@@ -229,7 +229,7 @@
             this.CTTextBoxNhapMatKhau.Multiline = false;
             this.CTTextBoxNhapMatKhau.Name = "CTTextBoxNhapMatKhau";
             this.CTTextBoxNhapMatKhau.Padding = new System.Windows.Forms.Padding(7);
-            this.CTTextBoxNhapMatKhau.PasswordChar = false;
+            this.CTTextBoxNhapMatKhau.PasswordChar = true;
             this.CTTextBoxNhapMatKhau.PlaceholderColor = System.Drawing.Color.DimGray;
             this.CTTextBoxNhapMatKhau.PlaceholderText = "Nhập mật khẩu";
             this.CTTextBoxNhapMatKhau.ReadOnly = false;
@@ -237,7 +237,7 @@
             this.CTTextBoxNhapMatKhau.TabIndex = 4;
             this.CTTextBoxNhapMatKhau.Texts = "";
             this.CTTextBoxNhapMatKhau.UnderlineedStyle = true;
-            this.CTTextBoxNhapMatKhau._TextChanged += new System.EventHandler(this.CTTextBoxNhapMatKhau__TextChanged);
+            //this.CTTextBoxNhapMatKhau._TextChanged += new System.EventHandler(this.CTTextBoxNhapMatKhau__TextChanged);
             // 
             // CTTextBoxNhapTenTaiKhoan
             // 

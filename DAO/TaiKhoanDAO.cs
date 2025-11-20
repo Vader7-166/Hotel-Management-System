@@ -57,17 +57,26 @@ namespace Hotel_Management_System.DAO
         }
         public void AddOrUpdateTK(TaiKhoan taiKhoan)
         {
-            try
+            using (HotelDTO dbContext = new HotelDTO())
             {
-                taiKhoan.NhanVien = db.NhanViens.Find(taiKhoan.MaNV);
-                taiKhoan.DaXoa = false;
-                db.TaiKhoans.AddOrUpdate(taiKhoan);
-                db.SaveChanges();
-                instance = null;
-            }
-            catch (Exception)
-            {
-                db.TaiKhoans.Remove(taiKhoan);
+                try
+                {
+                    // Tối ưu hóa: Chỉ dựa vào MaNV, không cần tải lại NhanVien
+                    taiKhoan.NhanVien = null;
+
+                    taiKhoan.DaXoa = false;
+
+                    // Sửa lỗi: Sử dụng dbContext cục bộ mới
+                    dbContext.TaiKhoans.AddOrUpdate(taiKhoan);
+                    dbContext.SaveChanges(); // Lệnh lưu SẼ hoạt động đúng
+
+                    // KHÔNG cần instance = null (đã bỏ)
+                }
+                catch (Exception ex)
+                {
+                    // Ném lỗi để form biết
+                    throw ex;
+                }
             }
 
         }

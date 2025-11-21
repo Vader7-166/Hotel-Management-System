@@ -33,7 +33,6 @@
             this.panelMainChildForm = new System.Windows.Forms.Panel();
             this.panelInfomation = new System.Windows.Forms.Panel();
             this.labelPhienBan = new System.Windows.Forms.Label();
-            this.labelBanQuyen = new System.Windows.Forms.Label();
             this.Sidebar = new System.Windows.Forms.Panel();
             this.ButtonThongKe = new System.Windows.Forms.Button();
             this.ButtonDanhSachTaiKhoan = new System.Windows.Forms.Button();
@@ -95,7 +94,6 @@
             // 
             this.panelInfomation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(72)))), ((int)(((byte)(145)))), ((int)(((byte)(153)))));
             this.panelInfomation.Controls.Add(this.labelPhienBan);
-            this.panelInfomation.Controls.Add(this.labelBanQuyen);
             this.panelInfomation.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelInfomation.Location = new System.Drawing.Point(262, 893);
             this.panelInfomation.Name = "panelInfomation";
@@ -111,17 +109,6 @@
             this.labelPhienBan.Size = new System.Drawing.Size(92, 17);
             this.labelPhienBan.TabIndex = 1;
             this.labelPhienBan.Text = "Version 1.0.0";
-            // 
-            // labelBanQuyen
-            // 
-            this.labelBanQuyen.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.labelBanQuyen.AutoSize = true;
-            this.labelBanQuyen.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBanQuyen.Location = new System.Drawing.Point(6, 11);
-            this.labelBanQuyen.Name = "labelBanQuyen";
-            this.labelBanQuyen.Size = new System.Drawing.Size(398, 21);
-            this.labelBanQuyen.TabIndex = 0;
-            this.labelBanQuyen.Text = "Copyright © 2022 TBT Coorporation. All rights reserved.";
             // 
             // Sidebar
             // 
@@ -587,7 +574,6 @@
         private System.Windows.Forms.Panel panelMainChildForm;
         private System.Windows.Forms.Panel panelInfomation;
         private System.Windows.Forms.Label labelPhienBan;
-        private System.Windows.Forms.Label labelBanQuyen;
         private System.Windows.Forms.Panel Sidebar;
         private System.Windows.Forms.Panel panelName;
         private System.Windows.Forms.Panel panelControlBox;

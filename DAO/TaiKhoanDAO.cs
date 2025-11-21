@@ -38,8 +38,12 @@ namespace Hotel_Management_System.DAO
         public List<TaiKhoan> GetTaiKhoans()
         {
 
-                return db.TaiKhoans.Where(p=>p.DaXoa==false).ToList();
-            
+            using (HotelDTO context = new HotelDTO())
+            {
+                return context.TaiKhoans.Include("NhanVien").AsNoTracking().Where(p => p.DaXoa == false).ToList();
+            }
+            ;
+
         }
         public List<TaiKhoan> GetTaiKhoansWithUserName(string username)
         {

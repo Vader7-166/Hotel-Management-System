@@ -357,7 +357,7 @@ namespace Hotel_Management_System.GUI
         private void buttonDefault_Click(object sender, EventArgs e)
         {
             #region Check DB Connection 
-            string connectionString = @"data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\Database\Hotel_Management_System.mdf;integrated security=True;connect timeout=30;MultipleActiveResultSets=True;App=EntityFramework";
+            string connectionString = @"data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\Database\HotelManagement.mdf;integrated security=True;connect timeout=30;MultipleActiveResultSets=True;App=EntityFramework";
             try
             {
                 SqlHelper sqlHelper = new SqlHelper(connectionString);

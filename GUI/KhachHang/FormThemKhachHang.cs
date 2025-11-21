@@ -50,15 +50,15 @@ namespace Hotel_Management_System.GUI
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        protected override CreateParams CreateParams
-        {
-            get
-            {
-                CreateParams cp = base.CreateParams;
-                cp.Style |= 0x20000; // <--- Minimize borderless form from taskbar
-                return cp;
-            }
-        }
+        //protected override CreateParams CreateParams
+        //{
+        //    get
+        //    {
+        //        CreateParams cp = base.CreateParams;
+        //        cp.Style |= 0x20000; // <--- Minimize borderless form from taskbar
+        //        return cp;
+        //    }
+        //}
 
         //Private Methods
         //Private Methods

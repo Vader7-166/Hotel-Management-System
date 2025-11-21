@@ -226,5 +226,10 @@ namespace Hotel_Management_System.GUI
         {
             grid.Cursor = Cursors.Default;
         }
+
+        private void FormDanhSachTaiKhoan_Activated(object sender, EventArgs e)
+        {
+            LoadAllGrid();
+        }
     }
 }

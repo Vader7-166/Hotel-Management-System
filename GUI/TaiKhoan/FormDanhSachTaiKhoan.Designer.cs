@@ -276,6 +276,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "FormDanhSachTaiKhoan";
+            this.Activated += new System.EventHandler(this.FormDanhSachTaiKhoan_Activated);
             this.Load += new System.EventHandler(this.FormDanhSachTaiKhoan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid)).EndInit();

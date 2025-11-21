@@ -23,12 +23,14 @@ namespace Hotel_Management_System.GUI
         public FormDanhSachTaiKhoan()
         {
             InitializeComponent();
+            LoadAllGrid();
         }
 
         public FormDanhSachTaiKhoan(FormMain formMain)
         {
             InitializeComponent();
             this.formMain = formMain;
+            LoadAllGrid();
         }
 
         private void CTButtonThemTaiKhoan_Click(object sender, EventArgs e)

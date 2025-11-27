@@ -73,16 +73,6 @@ namespace Hotel_Management_System.GUI
            
         }
 
-        private void FormSuaKhachHang_Resize(object sender, EventArgs e)
-        {
-            this.Invalidate();
-        }
-
-        private void FormSuaKhachHang_SizeChanged(object sender, EventArgs e)
-        {
-            this.Invalidate();
-        }
-
         private void FormSuaKhachHang_Activated(object sender, EventArgs e)
         {
             this.Invalidate();

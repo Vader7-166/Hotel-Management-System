@@ -57,16 +57,6 @@ namespace Hotel_Management_System.GUI
             
         }
 
-        private void FormThemKhachHang_Resize(object sender, EventArgs e)
-        {
-            this.Invalidate();
-        }
-
-        private void FormThemKhachHang_SizeChanged(object sender, EventArgs e)
-        {
-            this.Invalidate();
-        }
-
         private void FormThemKhachHang_Activated(object sender, EventArgs e)
         {
             this.Invalidate();

@@ -292,11 +292,8 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "FormSuaTaiKhoan";
-            this.Activated += new System.EventHandler(this.FormSuaTaiKhoan_Activated);
             this.Load += new System.EventHandler(this.FormSuaTaiKhoan_Load);
-            this.SizeChanged += new System.EventHandler(this.FormSuaTaiKhoan_SizeChanged);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormSuaTaiKhoan_Paint);
-            this.Resize += new System.EventHandler(this.FormSuaTaiKhoan_Resize);
             this.PanelBackground.ResumeLayout(false);
             this.PanelBackground.PerformLayout();
             this.panel1.ResumeLayout(false);

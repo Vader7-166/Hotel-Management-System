@@ -281,9 +281,7 @@
             this.Text = "FormThemTaiKhoan";
             this.Activated += new System.EventHandler(this.FormThemTaiKhoan_Activated);
             this.Load += new System.EventHandler(this.FormThemTaiKhoan_Load);
-            this.SizeChanged += new System.EventHandler(this.FormThemTaiKhoan_SizeChanged);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormThemTaiKhoan_Paint);
-            this.Resize += new System.EventHandler(this.FormThemTaiKhoan_Resize);
             this.PanelBackground.ResumeLayout(false);
             this.PanelBackground.PerformLayout();
             this.panel1.ResumeLayout(false);

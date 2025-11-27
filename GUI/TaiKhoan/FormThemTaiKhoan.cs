@@ -46,15 +46,6 @@ namespace Hotel_Management_System.GUI
         {
             
         }
-        private void FormThemTaiKhoan_Resize(object sender, EventArgs e)
-        {
-            this.Invalidate();
-        }
-
-        private void FormThemTaiKhoan_SizeChanged(object sender, EventArgs e)
-        {
-            this.Invalidate();
-        }
 
         private void FormThemTaiKhoan_Activated(object sender, EventArgs e)
         {

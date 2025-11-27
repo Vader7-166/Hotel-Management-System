@@ -55,20 +55,7 @@ namespace Hotel_Management_System.GUI
         {
             
         }
-        private void FormSuaTaiKhoan_Resize(object sender, EventArgs e)
-        {
-            this.Invalidate();
-        }
 
-        private void FormSuaTaiKhoan_SizeChanged(object sender, EventArgs e)
-        {
-            this.Invalidate();
-        }
-
-        private void FormSuaTaiKhoan_Activated(object sender, EventArgs e)
-        {
-            this.Invalidate();
-        }
 
         private void PanelBackground_Paint(object sender, PaintEventArgs e)
         {

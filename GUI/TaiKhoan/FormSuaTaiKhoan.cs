@@ -132,12 +132,13 @@ namespace Hotel_Management_System.GUI
                 else
                     taiKhoan.CapDoQuyen = 1;
                 TaiKhoanBUS.Instance.AddOrUpdateTK(taiKhoan);
+                //TaiKhoanBUS.Instance.UpdateTaiKhoanAndMaNV(taiKhoan);
 
                 CTMessageBox.Show("Cập nhật thông tin thành công.", "Thông báo",
                             MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 CTMessageBox.Show("Đã xảy ra lỗi! Vui lòng thử lại.", "Thông báo",
                             MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -48,16 +48,6 @@ namespace Hotel_Management_System.GUI
             
         }
 
-        private void FormThemNhanVien_Resize(object sender, EventArgs e)
-        {
-            this.Invalidate();
-        }
-
-        private void FormThemNhanVien_SizeChanged(object sender, EventArgs e)
-        {
-            this.Invalidate();
-        }
-
         private void FormThemNhanVien_Activated(object sender, EventArgs e)
         {
             this.Invalidate();

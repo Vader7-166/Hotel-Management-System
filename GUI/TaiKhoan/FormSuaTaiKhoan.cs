@@ -155,11 +155,6 @@ namespace Hotel_Management_System.GUI
             {
                 CTTextBoxNhapMatKhau.PasswordChar = true;
             }
-            /*TextBox textBoxPasswordConfirm = sender as TextBox;
-            if (textBoxPasswordConfirm.Focused == false)
-                textBoxPasswordConfirm.UseSystemPasswordChar = false;
-            else
-                textBoxPasswordConfirm.UseSystemPasswordChar = true;*/
         }
 
         private void ctEyePassword1_Click(object sender, EventArgs e)

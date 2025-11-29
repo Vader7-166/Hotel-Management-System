@@ -78,5 +78,38 @@ namespace Hotel_Management_System.DAO
                 return "NV" + max.ToString();
             
         }
+
+        public string GetMaNVNextAdvance(string ChucVu)
+        {
+            string prefix = "";
+            if (ChucVu == "Admin")
+            {
+                prefix = "AD";
+            }
+            else if (ChucVu == "Quản lý")
+            {
+                prefix = "QL";
+            }
+            else
+            {
+                prefix = "NV";
+            }
+
+            List<NhanVien> NV = db.NhanViens.Where(p => p.MaNV.Contains(prefix)).ToList();
+            string MaMax = NV[NV.Count - 1].MaNV;
+            MaMax = MaMax.Substring(MaMax.Length - 3, 3);
+            int max = int.Parse(MaMax);
+            max++;
+            if (max < 10)
+            {
+                return prefix + "00" + max.ToString();
+            }
+            else if (max < 100)
+            {
+                return prefix + "0" + max.ToString();
+            }
+            return prefix + max.ToString();
+
+        }
     }
 }

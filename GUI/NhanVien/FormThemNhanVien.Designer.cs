@@ -46,7 +46,6 @@ namespace Hotel_Management_System.GUI
             this.ctTextBoxEmail = new Hotel_Management_System.CustomControl.CTTextBox();
             this.CTTextBoxDiaChi = new Hotel_Management_System.CustomControl.CTTextBox();
             this.CTTextBoxNhapCCCD = new Hotel_Management_System.CustomControl.CTTextBox();
-            this.CTTextBoxNhapChucVu = new Hotel_Management_System.CustomControl.CTTextBox();
             this.CTTextBoxNhapHoTen = new Hotel_Management_System.CustomControl.CTTextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -54,6 +53,7 @@ namespace Hotel_Management_System.GUI
             this.CTButtonThoat = new Hotel_Management_System.CustomControl.CTButton();
             this.CTButtonCapNhat = new Hotel_Management_System.CustomControl.CTButton();
             this.PanelBackground = new System.Windows.Forms.Panel();
+            this.ComboBoxChucVu = new Hotel_Management_System.CustomControl.CTComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -80,6 +80,7 @@ namespace Hotel_Management_System.GUI
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(235)))), ((int)(((byte)(243)))));
+            this.panel1.Controls.Add(this.ComboBoxChucVu);
             this.panel1.Controls.Add(this.ComboBoxGioiTinh);
             this.panel1.Controls.Add(this.pictureBox9);
             this.panel1.Controls.Add(this.LabelNgaySinh);
@@ -94,7 +95,6 @@ namespace Hotel_Management_System.GUI
             this.panel1.Controls.Add(this.ctTextBoxEmail);
             this.panel1.Controls.Add(this.CTTextBoxDiaChi);
             this.panel1.Controls.Add(this.CTTextBoxNhapCCCD);
-            this.panel1.Controls.Add(this.CTTextBoxNhapChucVu);
             this.panel1.Controls.Add(this.CTTextBoxNhapHoTen);
             this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox1);
@@ -312,29 +312,6 @@ namespace Hotel_Management_System.GUI
             this.CTTextBoxNhapCCCD.UnderlineedStyle = true;
             this.CTTextBoxNhapCCCD._TextChanged += new System.EventHandler(this.CTTextBoxNhapCCCD__TextChanged);
             // 
-            // CTTextBoxNhapChucVu
-            // 
-            this.CTTextBoxNhapChucVu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(235)))), ((int)(((byte)(243)))));
-            this.CTTextBoxNhapChucVu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(145)))), ((int)(((byte)(175)))));
-            this.CTTextBoxNhapChucVu.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(96)))), ((int)(((byte)(116)))));
-            this.CTTextBoxNhapChucVu.BorderRadius = 0;
-            this.CTTextBoxNhapChucVu.BorderSize = 2;
-            this.CTTextBoxNhapChucVu.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CTTextBoxNhapChucVu.IsFocused = false;
-            this.CTTextBoxNhapChucVu.Location = new System.Drawing.Point(107, 139);
-            this.CTTextBoxNhapChucVu.Margin = new System.Windows.Forms.Padding(4);
-            this.CTTextBoxNhapChucVu.Multiline = false;
-            this.CTTextBoxNhapChucVu.Name = "CTTextBoxNhapChucVu";
-            this.CTTextBoxNhapChucVu.Padding = new System.Windows.Forms.Padding(7);
-            this.CTTextBoxNhapChucVu.PasswordChar = false;
-            this.CTTextBoxNhapChucVu.PlaceholderColor = System.Drawing.Color.DimGray;
-            this.CTTextBoxNhapChucVu.PlaceholderText = "Nhập chức vụ";
-            this.CTTextBoxNhapChucVu.ReadOnly = false;
-            this.CTTextBoxNhapChucVu.Size = new System.Drawing.Size(237, 35);
-            this.CTTextBoxNhapChucVu.TabIndex = 2;
-            this.CTTextBoxNhapChucVu.Texts = "";
-            this.CTTextBoxNhapChucVu.UnderlineedStyle = true;
-            // 
             // CTTextBoxNhapHoTen
             // 
             this.CTTextBoxNhapHoTen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(235)))), ((int)(((byte)(243)))));
@@ -458,6 +435,28 @@ namespace Hotel_Management_System.GUI
             this.PanelBackground.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelBackground_Paint);
             this.PanelBackground.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelBackground_MouseDown);
             // 
+            // ComboBoxChucVu
+            // 
+            this.ComboBoxChucVu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(235)))), ((int)(((byte)(243)))));
+            this.ComboBoxChucVu.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(145)))), ((int)(((byte)(175)))));
+            this.ComboBoxChucVu.BorderSize = 2;
+            this.ComboBoxChucVu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxChucVu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ComboBoxChucVu.ForeColor = System.Drawing.Color.Black;
+            this.ComboBoxChucVu.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(145)))), ((int)(((byte)(175)))));
+            this.ComboBoxChucVu.Items.AddRange(new object[] {
+            "Admin",
+            "Quản lý",
+            "Nhân Viên"});
+            this.ComboBoxChucVu.ListBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(235)))), ((int)(((byte)(243)))));
+            this.ComboBoxChucVu.ListTextColor = System.Drawing.Color.Black;
+            this.ComboBoxChucVu.Location = new System.Drawing.Point(110, 144);
+            this.ComboBoxChucVu.Name = "ComboBoxChucVu";
+            this.ComboBoxChucVu.Padding = new System.Windows.Forms.Padding(2);
+            this.ComboBoxChucVu.Size = new System.Drawing.Size(153, 33);
+            this.ComboBoxChucVu.TabIndex = 12;
+            this.ComboBoxChucVu.Texts = "  Chức vụ";
+            // 
             // FormThemNhanVien
             // 
             this.AcceptButton = this.CTButtonCapNhat;
@@ -518,5 +517,6 @@ namespace Hotel_Management_System.GUI
         private CustomControl.CTTextBox ctTextBoxSDT;
         private CustomControl.CTComboBox ComboBoxGioiTinh;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private CTComboBox ComboBoxChucVu;
     }
 }

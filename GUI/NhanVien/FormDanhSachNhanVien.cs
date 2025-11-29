@@ -184,6 +184,11 @@ namespace Hotel_Management_System.GUI
                         CTMessageBox.Show("Bạn không có quyền thực hiện thao tác này.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
+                    if (taiKhoan1.MaNV == this.grid.Rows[y].Cells[1].Value.ToString())
+                    {
+                        CTMessageBox.Show("Không thể xóa tài khoản bạn đang đăng nhập.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
                     DialogResult dialogresult = CTMessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Thông báo",
                                             MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (dialogresult == DialogResult.Yes)

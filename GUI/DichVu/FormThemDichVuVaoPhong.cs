@@ -382,9 +382,9 @@ namespace Hotel_Management_System.GUI
             if (y >= 0 && x == 3)
             {
                 #region Remove Service
+                DichVu dichVu=null;
                 try
                 {
-                    DichVu dichVu=null;
                     if (int.Parse(dgvDVDaChon.Rows[y].Cells[1].Value.ToString())>1)
                     {
                         decimal dongia = decimal.Parse(dgvDVDaChon.Rows[y].Cells[2].Value.ToString().Trim(',')) / int.Parse(dgvDVDaChon.Rows[y].Cells[1].Value.ToString());
@@ -420,6 +420,7 @@ namespace Hotel_Management_System.GUI
                             {
                                 if (item.Cells[2].Value.ToString() != "")
                                     item.Cells[2].Value = ++dichVu.SLConLai;
+                                
                             }
                         }
                     }

@@ -36,13 +36,13 @@ namespace Hotel_Management_System.DAO
             DateTime checkin = new DateTime();
             DateTime checkout = new DateTime();
                
-            if (ctdp != null)
+            if (ctdp == null)
             {
-                checkin = ctdp.CheckIn;
-                checkout = ctdp.CheckOut;
-                timeSpan = checkout.Subtract(checkin);
+                return 0;
             }
-            return timeSpan.Days;
+            checkin = ctdp.CheckIn;
+            checkout = ctdp.CheckOut;
+            return (checkout.Date - checkin.Date).Days;
         }
         public int getKhoangTGTheoGio(string MaCTDP)
         {

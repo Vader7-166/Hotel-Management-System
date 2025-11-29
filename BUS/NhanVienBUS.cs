@@ -45,5 +45,9 @@ namespace Hotel_Management_System.BUS
         {
             return NhanVienDAO.Instance.GetMaNVNext();
         }
+        public string GetMaNVNextAdvance(string chucvu)
+        {
+            return NhanVienDAO.Instance.GetMaNVNextAdvance(chucvu);
+        }
     }
 }

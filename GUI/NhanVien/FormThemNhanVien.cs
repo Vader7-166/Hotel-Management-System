@@ -120,7 +120,8 @@ namespace Hotel_Management_System.GUI
         private void CTButtonCapNhat_Click(object sender, EventArgs e)
         {
             string HoTen = CTTextBoxNhapHoTen.Texts;
-            string ChucVu = CTTextBoxNhapChucVu.Texts;
+            //string ChucVu = CTTextBoxNhapChucVu.Texts;
+            string ChucVu = ComboBoxChucVu.Texts;
             string Luong = CTTextBoxLuong.Texts;
             string SDT = ctTextBoxSDT.Texts;
             string CCCD = CTTextBoxNhapCCCD.Texts;
@@ -154,7 +155,8 @@ namespace Hotel_Management_System.GUI
                 }
                 try
                 {
-                    nhanVien.MaNV = NhanVienBUS.Instance.GetMaNVNext();
+                    //nhanVien.MaNV = NhanVienBUS.Instance.GetMaNVNext();
+                    nhanVien.MaNV = NhanVienBUS.Instance.GetMaNVNextAdvance(this.ComboBoxChucVu.Texts.Trim(' '));
                     nhanVien.ChucVu = ChucVu;
                     nhanVien.CCCD = CCCD;
                     nhanVien.GioiTinh = this.ComboBoxGioiTinh.Texts.Trim(' ');

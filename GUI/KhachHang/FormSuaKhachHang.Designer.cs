@@ -315,9 +315,7 @@
             this.Text = "FormSuaKhachHang";
             this.Activated += new System.EventHandler(this.FormSuaKhachHang_Activated);
             this.Load += new System.EventHandler(this.FormSuaKhachHang_Load);
-            this.SizeChanged += new System.EventHandler(this.FormSuaKhachHang_SizeChanged);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormSuaKhachHang_Paint);
-            this.Resize += new System.EventHandler(this.FormSuaKhachHang_Resize);
             this.PanelBackground.ResumeLayout(false);
             this.PanelBackground.PerformLayout();
             this.panel1.ResumeLayout(false);

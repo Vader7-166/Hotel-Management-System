@@ -446,9 +446,7 @@ namespace Hotel_Management_System.GUI
             this.Text = "FormThongTinNhanVien";
             this.Activated += new System.EventHandler(this.FormThongTinNhanVien_Activated);
             this.Load += new System.EventHandler(this.FormThongTinNhanVien_Load);
-            this.SizeChanged += new System.EventHandler(this.FormThongTinNhanVien_SizeChanged);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.FormThongTinNhanVien_Paint);
-            this.Resize += new System.EventHandler(this.FormThongTinNhanVien_Resize);
             this.PanelBackground.ResumeLayout(false);
             this.PanelBackground.PerformLayout();
             this.panel4.ResumeLayout(false);

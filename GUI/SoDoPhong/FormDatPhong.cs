@@ -135,7 +135,6 @@ namespace Hotel_Management_System.GUI.SoDoPhong
             try
             {
                 gridPhongTrong.Rows.Clear();
-                //List<Phong> phongs = PhongBUS.Instance.FindPhongTrong(CTDatePickerNgayBD.Value, CTDatePickerNgayKT.Value, listPhongDaDat);
                 List<Phong> phongs = PhongBUS.Instance.FindPhongTrong(this.CheckIn, this.CheckOut, listPhongDaDat);
                 foreach (Phong phong in phongs)
                 {
